@@ -1,0 +1,7 @@
+#ifndef SERVERAPIMANAGER_H
+#define SERVERAPIMANAGER_H
+
+
+
+
+#endif
