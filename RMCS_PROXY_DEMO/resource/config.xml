@@ -1,0 +1,50 @@
+<config>
+	<groups>
+		<group name = "bitorobotics">
+			<family name = "arm">
+				<names>
+					<name>left arm</name>
+			
+					<name>right arm</name>
+				</names>
+			</family>
+			
+			<family name = "leg">
+				<names>
+					<name>left leg</name>
+
+					<name>right leg</name>
+				</names>
+			</family>
+			
+			<family name = "body">
+				<names>
+					<name>left part</name>
+
+					<name>right part</name>
+				</names>
+			</family>
+
+		</group>
+		
+	<group name = "machine learning">
+			<family name = "algo">
+				<names>
+					<name>neutral network</name>
+					
+					<name>CNN</name>
+				</names>
+			</family>
+			
+			<family name = "quality">
+				<names>
+					<name>space complexity</name>
+
+					<name>time complexity</name>
+				</names>
+			</family>
+			
+		</group>
+
+	</groups>
+</config>

@@ -10,6 +10,7 @@ using namespace std;
 #include <queue>
 #include <list>
 
+/*
 class LookUpManager:public CThread{
 	//这里是lLookUpManager管理类
 	//它是个线程类
@@ -37,7 +38,7 @@ class LookUpManager:public CThread{
 	
 	
 	*/
-
+/*
 private:
 	//------------------------
 	hebi::Lookup& lookup; //hebi接口对象
@@ -84,31 +85,64 @@ public:
 	static const int  DEAULT_SLEEP_TIME=100; //默认的休眠时间
 
 
+}; */
+
+class FamilyStruct {
+private:
+	string name;
+	vector<string> nameList;
+	string namesWithinFamily;
+
+public:
+	FamilyStruct() {}
+	FamilyStruct(string name) { this->name = name; }
+	~FamilyStruct() {}
+	void setName(string name) { this->name = name; }
+	string getName() { return name; }
+	void addName(string name) {
+		nameList.push_back(name);
+		namesWithinFamily = string("");
+		// Get all the names of members in a string, with ';' as spliter
+		for (int i = 0;i < nameList.size();i++) {
+			namesWithinFamily.append(nameList[i] + ";");
+		}
+	}
+	void setNameList(vector<string> namelist) { 
+		this->nameList = namelist;		
+	}
+	string getNamesWithinFamily() {
+		return namesWithinFamily;
+	}
+	vector<string> getNameList() { return nameList; }
+
 };
+
 
 class GroupStruct{
 private:
-	string family;
-	string namesWithinFamily;
+	string name;
+	vector<FamilyStruct> familyList;
 	//初始表初始化
-	bool isConnected();
+	bool isConnected;
 public:
-	GroupStruct();
-	~GroupStruct();
-	string getFamily(){return family;}
-	string getNamesWithinFamily(){return namesWithinFamily;}
-	bool isConnected(){return isConnected;}
-	void setFamily(string family_){this->family=family_;}
-	void setNames(vector<string> names){
-		string s("");
-		for(int i=0;i<names.size();i++){
-			s.append(names[i]+";");
-		}
-		this->namesWithinFamily.clear();
-		this->namesWithinFamily.append(s);
+	GroupStruct() {}
+	GroupStruct(string name) { this->name = name; }
+	~GroupStruct() {}
+	void setName(string name) { this->name = name; }
+	string getName() { return name; }
+	void addFamily(FamilyStruct family) {
+		familyList.push_back(family);
 	}
+	vector<FamilyStruct> getFamilyList() { return familyList; }
+	void setConnectStatus() {
+	
+		// 设置isConnected的布尔值 后续需要间隔n时间重新设置isConnected的值
+	}
+	bool getConnectedStatus(){return isConnected;}
 
 };
+
+
 
 
 #endif
