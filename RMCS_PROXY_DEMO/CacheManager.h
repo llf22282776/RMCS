@@ -135,7 +135,7 @@ public:
 		void* intP;
 		int arg_nums=2;
 		char* args[]={"exists",key};
-		this->cacheConnect.setCommndWithArgs(arg_nums,args,"keyExist",intP);
+		this->setCommndWithArgs(arg_nums,args,"keyExist",intP);
 		return (*(int*)intP == 0)?false:true;
 
 
@@ -144,7 +144,7 @@ public:
 		void* intP;
 		int arg_nums=2;
 		char* args[]={"del",key};
-		this->cacheConnect.setCommndWithArgs(arg_nums,args,"keyDelete",intP);
+		this->setCommndWithArgs(arg_nums,args,"keyDelete",intP);
 		return (*(int*)intP == 0)?false:true;
 
 	}//É¾³ý¼ü
@@ -160,7 +160,7 @@ public:
 			 vector<string>* vec=new vector<string>();
 
 			 for(int i=0;i<reply->elements;i++){
-				 vec.push_back((*(reply->element))[i].str);
+				 vec->push_back((*(reply->element))[i].str);
 			 }
 			 res=(void*)vec;
 			 return true;

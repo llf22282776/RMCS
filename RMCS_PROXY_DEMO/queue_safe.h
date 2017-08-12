@@ -24,18 +24,23 @@ private:
 	std::queue<T> data_queue;  
 	std::condition_variable data_cond;  
 public:  
-	threadsafe_queue(){}  
-	threadsafe_queue(threadsafe_queue const& other)  
+
+	queue_safe(){
+
+	}  
+	queue_safe(queue_safe const& other)  
 	{  
 		std::lock_guard<std::mutex> lk(other.mut);  
 		data_queue=other.data_queue;  
 	}  
+	
 	void push(T new_value)//入队操作  
 	{  
 		std::lock_guard<std::mutex> lk(mut);  
 		data_queue.push(new_value);  
 		data_cond.notify_all();  
 	}  
+
 	void wait_and_pop(T& value)//直到有元素可以删除为止  
 	{  
 		std::unique_lock<std::mutex> lk(mut);  
@@ -43,6 +48,7 @@ public:
 		value=data_queue.front();  
 		data_queue.pop();  
 	}  
+
 	std::shared_ptr<T> wait_and_pop()  
 	{  
 		std::unique_lock<std::mutex> lk(mut);  
@@ -51,6 +57,7 @@ public:
 		data_queue.pop();  
 		return res;  
 	}  
+
 	bool try_pop(T& value)//不管有没有队首元素直接返回  
 	{  
 		std::lock_guard<std::mutex> lk(mut);  
@@ -60,6 +67,7 @@ public:
 		data_queue.pop();  
 		return true;  
 	}  
+
 	std::shared_ptr<T> try_pop()  
 	{  
 		std::lock_guard<std::mutex> lk(mut);  

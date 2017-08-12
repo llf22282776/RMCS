@@ -27,6 +27,7 @@ class LookUpManager:public CThread{
 private:
 	//------------------------
 	hebi::Lookup& lookup; //hebi接口对象
+
 	queue_safe<GroupfeedbackCustomStruct>& groupFeedbackQueue;//收到的异步groupfeedback都应该放到这里
 
 	//group会增加和减少,会不会影响什么？估计不会
@@ -64,8 +65,9 @@ public:
 	LookUpManager(
 		CacheManager& cacheManager,
 		queue_safe<GroupfeedbackCustomStruct>& groupFeedbackQueue,
-		Lookup lookup_,int sleep_time=DEAULT_SLEEP_TIME,
-		ConfigManager& configManager_
+		Lookup& lookup_,
+		ConfigManager& configManager_,
+		int sleep_time=DEAULT_SLEEP_TIME
 
 		);
 	//需要什么参数,缓存管理类，简单，不需要信息沟通,没必要生产者消费者模型,
@@ -75,8 +77,9 @@ public:
 	~LookUpManager();
 	void run() override; // override run function,to find 
 	void init() ;//init the lookupManager,比如跑起来
+	hebi::Lookup getLookUp(){return this->lookup;}
 	//-------------------
-	static const int  DEAULT_SLEEP_TIME=100; //默认的休眠时间
+	static const int  DEAULT_SLEEP_TIME=50; //默认的休眠时间
 
 
 }; 

@@ -3,7 +3,8 @@
 #include <mutex>
 #include <condition_variable>
 
-CacheManager::CacheManager(string ip_,int port_,int sleep_time_=LookUpManager::DEAULT_SLEEP_TIME):cacheConnect(ip_,port_),canUseRedis(true),sleep_time(sleep_time_){
+CacheManager::CacheManager(string ip_,int port_,
+						   int sleep_time_=LookUpManager::DEAULT_SLEEP_TIME):cacheConnect(ip_,port_),canUseRedis(true),sleep_time(sleep_time_){
 
 
 
@@ -12,6 +13,7 @@ CacheManager::CacheManager(string ip_,int port_,int sleep_time_=LookUpManager::D
 CacheManager::~CacheManager(){}
 void CacheManager::initCacheManager(){
 	this->isConnect=this->cacheConnect.init();
+	cout<<"redis connect status:"<<this->isConnected()<<endl;
 	this->start();//跑线程
 
 
@@ -26,6 +28,7 @@ vector<GroupStruct> CacheManager::getGroupInCache(){
 
 bool CacheManager::updateCacheFamilyAndItsNames(map<string,vector<string>> familyMap){
 	//已经在队列函数中处理了锁
+	cout<<"put family and its names into cache"<<endl;
 	if(this->isConnect == false)return false;
 	else {
 		this->family_name_queue.push(familyMap);
@@ -38,6 +41,7 @@ bool CacheManager::updateCacheFamilyAndItsNames(map<string,vector<string>> famil
 //这个函数通常在别的线程掉
 
 bool CacheManager::updateCacheGroupStateList(vector<GroupStruct> groupStructVec){
+	cout<<"update group connect status in cache"<<endl;
 	if(this->isConnect == false)return false;
 	else {
 		this->group_struct_queue.push(groupStructVec);
@@ -88,7 +92,7 @@ void CacheManager::run(){
 	{
 		customfamilyMap();//消耗下队列
 		customGroupStateMap();
-		if(this->sleep_time>=0){
+		if(this->sleep_time>0){
 			this_thread::sleep_for(std::chrono::milliseconds(this->sleep_time));
 		}
 	}
@@ -208,6 +212,7 @@ bool CacheManager::flushCacheGroupFeedBackList(GroupfeedbackCustomStruct gfd){
 
 }//刷新远端缓存里面的groupFeedback
 bool CacheManager::updateGroupFeedBack(GroupfeedbackCustomStruct gfd){
+	cout<<"put group feed back into cache"<<endl;
 	if(this->isConnect == false)return false;
 	else {
 		this->group_feedback_queue.push(gfd);
@@ -218,18 +223,14 @@ bool CacheManager::updateGroupFeedBack(GroupfeedbackCustomStruct gfd){
 
 }//更新缓存feedbacklist,只增不减
 void CacheManager::customGroupFeedBack(){
-	shared_ptr<vector<GroupfeedbackCustomStruct>> mapPtr  = this->group_feedback_queue.try_pop();
+	shared_ptr<GroupfeedbackCustomStruct> mapPtr  = this->group_feedback_queue.try_pop();
 	if(!mapPtr)return ;//没有取到需要消耗的groupVec
-	vector<GroupfeedbackCustomStruct>::iterator it;
-	for(it=mapPtr->begin();it!=mapPtr->end();it++){
-		//放之前要先判断下，这个group还在不在缓存里面了，因为有可能被删掉
-		char* keyTemp=new char(strlen(it->groupName.data())+1);
-		if(this->cacheConnect.isContainKey(strcpy(keyTemp,it->groupName.data()))){
-			this->flushCacheGroupFeedBackList(*it);
+
+	this->flushCacheGroupFeedBackList(*mapPtr);
+	
+
 		}
+	
 
 
-	}
-
-
-} //消耗队列里面的groupFeedBack
+ //消耗队列里面的groupFeedBack

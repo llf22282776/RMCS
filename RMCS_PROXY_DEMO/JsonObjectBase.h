@@ -18,8 +18,8 @@ using std::list;
 
 #define DoObjArrayDeSerialize_Wrapper(listType, type) DoObjArrayDeSerialize<##listType<type>>  
 
-typedef void* (*GenerateJsonObjForDeSerializeFromOutSide)(const string& propertyName);  
-typedef   int INT;
+typedef  void* (*GenerateJsonObjForDeSerializeFromOutSide)(const string& propertyName);  
+typedef  int INT;
 typedef  unsigned int UINT;
 typedef  long long  LONGLONG;
 typedef  unsigned long long ULONGLONG;

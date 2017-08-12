@@ -14,14 +14,23 @@ class DataBaseManager:public CThread
 	//一个连接本地的，一个连接远程的
 	//调取连接类的接口，进行数据库的实际写入
 public:
-	DataBaseManager();
-	~DataBaseManager();
+	DataBaseManager(){}
+	~DataBaseManager(){
+
+	}
 	void run() override;
+	void init() ;
 private:
 
 
 
 };
+void DataBaseManager::run(){
+
+
+
+
+}
 class DataBaseConnection{
 	//这个类封装了对数据库的连接，获取connection对象
 	//init函数解决和数据库连接,返回真假

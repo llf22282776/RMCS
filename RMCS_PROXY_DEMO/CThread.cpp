@@ -57,8 +57,8 @@ bool CThread::swap(CThread* t1 ){
 	}
 
 }	  //swap thread 
-std::thread::id CThread::get_id(){} //thread id
-bool CThread::joinable(){} //
+std::thread::id CThread::get_id(){return t->get_id();} //thread id
+bool CThread::joinable(){return t->joinable();} //
 std::thread* CThread::getThread(){
 	return this->t;
 

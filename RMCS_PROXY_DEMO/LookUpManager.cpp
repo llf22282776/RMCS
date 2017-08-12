@@ -6,9 +6,10 @@ using namespace std;
 using namespace hebi;
 LookUpManager::LookUpManager(CacheManager& cacheManager_,
 							 queue_safe<GroupfeedbackCustomStruct>& groupFeedbackQueue_,
-							 Lookup lookup_,
-							 int sleep_time_=DEAULT_SLEEP_TIME,
-							 ConfigManager& configManager_
+							 Lookup& lookup_,
+							 
+							 ConfigManager& configManager_,
+							 int sleep_time_=DEAULT_SLEEP_TIME
 							 )
 	:cacheManager(cacheManager_)
 	,groupFeedbackQueue(groupFeedbackQueue_)
@@ -50,7 +51,7 @@ void LookUpManager::run() {
 
 		this->updateGroupConncetState(this->cacheManager.getGroupInCache());
 		//4¡£Ïß³ÌÔÝÍ£
-		if(this->sleep_time>=0){
+		if(this->sleep_time>0){
 			this_thread::sleep_for(std::chrono::milliseconds(this->sleep_time));
 		}
 	}
