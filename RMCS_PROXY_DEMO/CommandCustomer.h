@@ -1,6 +1,9 @@
 #ifndef COMMANDCUSTOMER_H
 #define COMMANDCUSTOMER_H
 #include "CThread.h"
+#include <string>
+#include "LookUpManager.h"
+#include "FeedBackManager.h"
 class CommandCustomer:public CThread
 {
 
@@ -15,9 +18,18 @@ public:
 	CommandCustomer();
 	~CommandCustomer();
 	void run() override; //÷ÿ–¥run
-
+	void init();//
+	void getCommandStrut(string ct);
+	bool customCommand();
 private:
 
 };
+class CommandStruct{
 
+	string cmd;
+	GroupfeedbackCustomStruct gf;
+	
+
+
+};
 #endif // !

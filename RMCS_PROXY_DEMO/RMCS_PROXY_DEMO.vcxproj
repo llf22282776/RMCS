@@ -13,16 +13,34 @@
   <ItemGroup>
     <ClInclude Include="CacheManager.h" />
     <ClInclude Include="CommandCustomer.h" />
+    <ClInclude Include="ConfigManager.h" />
     <ClInclude Include="CThread.h" />
     <ClInclude Include="DataBaseManager.h" />
     <ClInclude Include="FeedBackCustomer.h" />
     <ClInclude Include="FeedBackManager.h" />
     <ClInclude Include="InitManager.h" />
+    <ClInclude Include="JsonObjectBase.h" />
+    <ClInclude Include="json_tool.h" />
     <ClInclude Include="LookUpManager.h" />
+    <ClInclude Include="queue_safe.h" />
     <ClInclude Include="ServerApiManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CacheManager.cpp" />
+    <ClCompile Include="CommandCustomer.cpp" />
+    <ClCompile Include="ConfigManager.cpp" />
     <ClCompile Include="CThread.cpp" />
+    <ClCompile Include="FeedBackCustomer.cpp" />
+    <ClCompile Include="FeedBackManager.cpp" />
+    <ClCompile Include="json_reader.cpp" />
+    <ClCompile Include="json_value.cpp" />
+    <ClCompile Include="json_writer.cpp" />
+    <ClCompile Include="LookUpManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="json_valueiterator.inl" />
+    <None Include="sconscript" />
+    <None Include="version.h.in" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A406C413-D7CC-4251-A1D9-40B6FF857EA4}</ProjectGuid>
@@ -61,10 +79,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>E:\tools\boost_1_61_0</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>pthreadVC2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\tools\boost_1_61_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

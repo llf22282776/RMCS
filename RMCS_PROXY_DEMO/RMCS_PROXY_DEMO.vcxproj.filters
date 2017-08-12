@@ -36,10 +36,22 @@
     <ClInclude Include="DataBaseManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ServerApiManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="CacheManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ServerApiManager.h">
+    <ClInclude Include="ConfigManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="queue_safe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonObjectBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="json_tool.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -47,5 +59,43 @@
     <ClCompile Include="CThread.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ConfigManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LookUpManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FeedBackManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CacheManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="json_reader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="json_value.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="json_writer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FeedBackCustomer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandCustomer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="json_valueiterator.inl">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="sconscript">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="version.h.in">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

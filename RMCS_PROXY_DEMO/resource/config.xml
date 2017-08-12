@@ -1,4 +1,14 @@
 <config>
+        <redisList>
+            <redis ip="" port="" />
+        </redisList>
+        <databases>
+            <database ip="" port="" user="" pwd="" dbSchme="" >
+                <parms>
+                    <parm name="charset" value="utf8" />
+                </parms>
+            </database>
+        </databases>
 	<groups>
 		<group name = "bitorobotics">
 			<family name = "arm">

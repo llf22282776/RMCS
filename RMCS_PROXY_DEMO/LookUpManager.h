@@ -1,4 +1,4 @@
-#ifndef	LOOKUPMANAGER_H
+ï»¿#ifndef	LOOKUPMANAGER_H
 #define LOOKUPMANAGER_H
 #include "CThread.h"
 #include <map>
@@ -7,126 +7,131 @@
 #include "src/lookup.hpp"
 using namespace std;
 #include "CacheManager.h"
-#include <queue>
+#include "queue_safe.h"
 #include <list>
-
-/*
+#include "FeedBackManager.h"
+#include "ConfigManager.h"
+#include "JsonObjectBase.h"
 class LookUpManager:public CThread{
-	//ÕâÀïÊÇlLookUpManager¹ÜÀíÀà
-	//ËüÊÇ¸öÏß³ÌÀà
-	//ĞèÒªÖÜÆÚĞÔµÄ¸üĞÂfamilyºÍnames
-	//¸üĞÂ»º´æµÄfamily and name map
-	//²¢ÇÒÖÜÆÚĞÔµÄ´Ó»º´æÖĞ¶ÁÈ¡ÓÃ»§¶¨ÒåµÄgroup
-	//¸üĞÂgroupµÄÁ¬½Ó×´Ì¬
-	//ĞèÒª»º³å¹ÜÀíÀà
-	//ĞèÒª¶¨Òå»º´æÀïÃæµÄgruopStateMap
+	//è¿™é‡Œæ˜¯lLookUpManagerç®¡ç†ç±»
+	//å®ƒæ˜¯ä¸ªçº¿ç¨‹ç±»
+	//éœ€è¦å‘¨æœŸæ€§çš„æ›´æ–°familyå’Œnames
+	//æ›´æ–°ç¼“å­˜çš„family and name map
+	//å¹¶ä¸”å‘¨æœŸæ€§çš„ä»ç¼“å­˜ä¸­è¯»å–ç”¨æˆ·å®šä¹‰çš„group
+	//æ›´æ–°groupçš„è¿æ¥çŠ¶æ€
+	//éœ€è¦ç¼“å†²ç®¡ç†ç±»
+	//éœ€è¦å®šä¹‰ç¼“å­˜é‡Œé¢çš„gruopStateMap
 	/*
-	»¹ÓĞgroup
-	key:{
-		family:
-		name:[]
-	}
-	value:{
-		isConnected:
-		list:[
-			
-		]
-
-
-
-	}
-	
-	
 	*/
-/*
+
 private:
 	//------------------------
-	hebi::Lookup& lookup; //hebi½Ó¿Ú¶ÔÏó
-	queue<hebi::GroupFeedback*>& groupFeedbackQueue;//ÊÕµ½µÄÒì²½groupfeedback¶¼Ó¦¸Ã·Åµ½ÕâÀï
-	//group»áÔö¼ÓºÍ¼õÉÙ,»á²»»áÓ°ÏìÊ²Ã´£¿¹À¼Æ²»»á
-	map<GroupStruct,unique_ptr<hebi::Group>> cacheGroupMap;//ĞèÒª¸üĞÂµÄmap,´Ó»º´æÀïÃæÈ¡£¬Èç¹ûkeyÃ»ÓĞ¾ÍÈ¡Ò»ÏÂaddFh,ÓĞ¾Í²»¹Ü
-	vector<FeedBackManager> feedbackManagerVec;
+	hebi::Lookup& lookup; //hebiæ¥å£å¯¹è±¡
+	queue_safe<GroupfeedbackCustomStruct>& groupFeedbackQueue;//æ”¶åˆ°çš„å¼‚æ­¥groupfeedbackéƒ½åº”è¯¥æ”¾åˆ°è¿™é‡Œ
+
+	//groupä¼šå¢åŠ å’Œå‡å°‘,ä¼šä¸ä¼šå½±å“ä»€ä¹ˆï¼Ÿä¼°è®¡ä¸ä¼š
+	map<string,unique_ptr<hebi::Group>> cacheGroupMap;//éœ€è¦æ›´æ–°çš„map,ä»ç¼“å­˜é‡Œé¢å–ï¼Œå¦‚æœkeyæ²¡æœ‰å°±å–ä¸€ä¸‹addFh,æœ‰å°±ä¸ç®¡
+	vector<FeedBackManager&> feedbackManagerVec;
 	vector<GroupStruct> fixedGroup;
-	int sleep_time; //ĞİÃßÊ±¼ä£¬È¡Ä¬ÈÏÖµ
+	CacheManager& cacheManager;
+	ConfigManager& configManager;
+	int sleep_time; //ä¼‘çœ æ—¶é—´ï¼Œå–é»˜è®¤å€¼
+	bool fixedAdded;
 	//----------------------
 	
 
 
 	//----------------------
-	void updateFamilyAndNamesMap(map<string,vector<string>> newFandNMap);//¸üĞÂ»º´æÖĞµÄmap,Ö¸ÕëÔÚº¯ÊıÄÚ½øĞĞÏú»Ù
-	map<string,vector<string>> getNewestMapFromHibi();//»ñµÃ×îĞÂµÄfamily mapµÄÒıÓÃ,·µ»Ø´¦µÄº¯ÊıÖĞ½øĞĞÏú»Ù
-	bool isFirstRun;//ÊÇ·ñµÚÒ»´ÎÔËĞĞ£¬ÊÇµÄ»°Îªtrue£¬·ñÔòÎªfalse,³õÊ¼»¯Îªfalse,µÚÒ»´ÎrunµÄÊ±ºò²»È¥¶Á£¬µÈsleepÊ±¼ä,È»ºógetEntryList
+	void updateFamilyAndNamesMap(map<string,vector<string>> newFandNMap);//æ›´æ–°ç¼“å­˜ä¸­çš„map,æŒ‡é’ˆåœ¨å‡½æ•°å†…è¿›è¡Œé”€æ¯
+	map<string,vector<string>> getNewestMapFromHibi();//è·å¾—æœ€æ–°çš„family mapçš„å¼•ç”¨,è¿”å›å¤„çš„å‡½æ•°ä¸­è¿›è¡Œé”€æ¯
+	bool isFirstRun;//æ˜¯å¦ç¬¬ä¸€æ¬¡è¿è¡Œï¼Œæ˜¯çš„è¯ä¸ºtrueï¼Œå¦åˆ™ä¸ºfalse,åˆå§‹åŒ–ä¸ºfalse,ç¬¬ä¸€æ¬¡runçš„æ—¶å€™ä¸å»è¯»ï¼Œç­‰sleepæ—¶é—´,ç„¶ågetEntryList
 
-	vector<GroupStruct> getGroupListFromCache();//´Ó»º´æÀï»ñÈ¡µ±Ç°ÓÃ»§¶¨ÒåµÄgroupµÄĞÅÏ¢,µ½mapÈ¥²é
-	void updateGroupConncetState(vector<GroupStruct> groupInCache);//Ë¢ĞÂgroupµÄÁ¬½Ó×´Ì¬,ÕâÀïÃæµÄ
-	bool updateOneGroupState(GroupStruct groupStrut);//Õâ¸ö·Åµ½cacheManagerµÄ¶ÓÁĞÀïÃæÈ¥£¬ÄÜ·Å½øÈ¥¾ÍÊÇtrue
-	vector<GroupStruct> getGroupsStateFromHeibi(vector<GroupStruct> groupVec);//´ÓheibiÀïÃæ»ñµÃcahceÀïÃæ¶¨ÒåµÄgroupµÄÁ¬½Ó×´Ì¬
-	GroupStruct	getGroupStateFromHeibi(GroupStruct groupVec);
+	vector<GroupStruct> getGroupListFromCache();//ä»ç¼“å­˜é‡Œè·å–å½“å‰ç”¨æˆ·å®šä¹‰çš„groupçš„ä¿¡æ¯,åˆ°mapå»æŸ¥
+	void updateGroupConncetState(vector<GroupStruct> groupInCache,int default_timeout=0);//åˆ·æ–°groupçš„è¿æ¥çŠ¶æ€,è¿™é‡Œé¢çš„
+	bool updateGroupsStateInCache(vector<GroupStruct> groupStrut);//è¿™ä¸ªæ”¾åˆ°cacheManagerçš„é˜Ÿåˆ—é‡Œé¢å»ï¼Œèƒ½æ”¾è¿›å»å°±æ˜¯true
+	vector<GroupStruct> getGroupsStateFromHeibi(vector<GroupStruct> groupVec,int default_int);//ä»heibié‡Œé¢è·å¾—cahceé‡Œé¢å®šä¹‰çš„groupçš„è¿æ¥çŠ¶æ€
 	
 	
 
-	vector<GroupStruct> getGroupListFromConfig();//´ÓÅäÖÃÎÄ¼şÀïÃæ»ñÈ¡
-
+	vector<GroupStruct> getGroupListFromConfig();//ä»é…ç½®æ–‡ä»¶é‡Œé¢è·å–
 	
-
-
+	void addHandlerFromGroups();//ä¸ºfixedå’Œç¼“å­˜çš„groupåŠ å¤„ç†å‡½æ•°
+	void addHandlerForOneGroup(vector<string>* &familyVec,vector<string>* &nameVec,string groupName);//æ·»åŠ ä¸€ä¸ªgroupçš„
+	void getFamilyAndNamesFromGroupStruct(GroupStruct& thisGroup,vector<string>* &familysVec,vector<string>* &namesVec);
 
 	//-----------------------
 public:
-	LookUpManager(CacheManager& cacheManager,queue<hebi::GroupFeedback>& groupFeedbackQueue);
-	//ĞèÒªÊ²Ã´²ÎÊı,»º´æ¹ÜÀíÀà£¬¼òµ¥£¬²»ĞèÒªĞÅÏ¢¹µÍ¨,Ã»±ØÒªÉú²úÕßÏû·ÑÕßÄ£ĞÍ,
-	//´«½øÀ´»º´æ¹ÜÀí¶ÔÏó£¬¶ÓÁĞ¶ÔÏó£¬
-	//ÒıÓÃÒªÔÚ³õÊ¼»¯ÁĞ±íÖĞ¸³Öµ
-	//lookupÔÚÀïÃæ´´½¨
+	LookUpManager(
+		CacheManager& cacheManager,
+		queue_safe<GroupfeedbackCustomStruct>& groupFeedbackQueue,
+		Lookup lookup_,int sleep_time=DEAULT_SLEEP_TIME,
+		ConfigManager& configManager_
+
+		);
+	//éœ€è¦ä»€ä¹ˆå‚æ•°,ç¼“å­˜ç®¡ç†ç±»ï¼Œç®€å•ï¼Œä¸éœ€è¦ä¿¡æ¯æ²Ÿé€š,æ²¡å¿…è¦ç”Ÿäº§è€…æ¶ˆè´¹è€…æ¨¡å‹,
+	//ä¼ è¿›æ¥ç¼“å­˜ç®¡ç†å¯¹è±¡ï¼Œé˜Ÿåˆ—å¯¹è±¡ï¼Œ
+	//å¼•ç”¨è¦åœ¨åˆå§‹åŒ–åˆ—è¡¨ä¸­èµ‹å€¼
+	//lookupåœ¨é‡Œé¢åˆ›å»º
 	~LookUpManager();
 	void run() override; // override run function,to find 
-	void init() ;//init the lookupManager,±ÈÈçÅÜÆğÀ´
-	//-------------`-`-`-`-`-`-`-----------
-	static const int  DEAULT_SLEEP_TIME=100; //Ä¬ÈÏµÄĞİÃßÊ±¼ä
+	void init() ;//init the lookupManager,æ¯”å¦‚è·‘èµ·æ¥
+	//-------------------
+	static const int  DEAULT_SLEEP_TIME=100; //é»˜è®¤çš„ä¼‘çœ æ—¶é—´
 
 
-}; */
+}; 
 
-class FamilyStruct {
+class FamilyStruct :public CJsonObjectBase{
 private:
 	string name;
-	vector<string> nameList;
-	string namesWithinFamily;
+	vector<NameStruct> nameList;
 
 public:
-	FamilyStruct() {}
+	FamilyStruct() {
+
+	}
 	FamilyStruct(string name) { this->name = name; }
 	~FamilyStruct() {}
 	void setName(string name) { this->name = name; }
 	string getName() { return name; }
 	void addName(string name) {
-		nameList.push_back(name);
-		namesWithinFamily = string("");
+		NameStruct name_(name,false);
+		nameList.push_back(name_);
 		// Get all the names of members in a string, with ';' as spliter
-		for (int i = 0;i < nameList.size();i++) {
-			namesWithinFamily.append(nameList[i] + ";");
-		}
 	}
-	void setNameList(vector<string> namelist) { 
+	void setNameList(vector<NameStruct> namelist) { 
 		this->nameList = namelist;		
 	}
-	string getNamesWithinFamily() {
-		return namesWithinFamily;
+	vector<NameStruct>   getNameList() { return nameList; }
+	virtual void SetPropertys(){
+		//
+		this->SetProperty("name",CJsonObjectBase::asString,&(this->name));
+		this->SetProperty("nameList",CJsonObjectBase::asVectorArray,&(this->nameList));
 	}
-	vector<string> getNameList() { return nameList; }
-
 };
 
+class NameStruct:public CJsonObjectBase{
 
-class GroupStruct{
+public:
+	string name;
+	bool connected;
+	NameStruct(string name_,bool connect_):name(name_),connected(connect_){}
+	~NameStruct(){}
+	virtual void SetPropertys(){
+		//
+		this->SetProperty("name",CJsonObjectBase::asString,&(this->name));
+		this->SetProperty("connected",CJsonObjectBase::asBool,&(this->connected));
+	}
+};
+class GroupStruct:public CJsonObjectBase{
 private:
 	string name;
 	vector<FamilyStruct> familyList;
-	//³õÊ¼±í³õÊ¼»¯
-	bool isConnected;
+	//åˆå§‹è¡¨åˆå§‹åŒ–
+
 public:
-	GroupStruct() {}
-	GroupStruct(string name) { this->name = name; }
+	GroupStruct():familyList(),name(""),isConnected(false){}
+	GroupStruct(string name_) :familyList(),name(name_),isConnected(false){}
 	~GroupStruct() {}
 	void setName(string name) { this->name = name; }
 	string getName() { return name; }
@@ -134,15 +139,12 @@ public:
 		familyList.push_back(family);
 	}
 	vector<FamilyStruct> getFamilyList() { return familyList; }
-	void setConnectStatus() {
-	
-		// ÉèÖÃisConnectedµÄ²¼¶ûÖµ ºóĞøĞèÒª¼ä¸ônÊ±¼äÖØĞÂÉèÖÃisConnectedµÄÖµ
+	virtual void SetPropertys(){
+		//
+		this->SetProperty("name",CJsonObjectBase::asString,&(this->name));
+		this->SetProperty("familyList",CJsonObjectBase::asVectorArray,&(this->familyList));
 	}
-	bool getConnectedStatus(){return isConnected;}
 
 };
-
-
-
 
 #endif

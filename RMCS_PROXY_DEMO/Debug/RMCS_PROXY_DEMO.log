@@ -1,0 +1,572 @@
+﻿生成启动时间为 2017/8/12 19:18:23。
+     1>项目“E:\tools\project\RMCS_PROXY_DEMO\RMCS_PROXY_DEMO\RMCS_PROXY_DEMO.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\tools\visualStudio2012\VC\bin\CL.exe /c /IE:\tools\boost_1_61_0 /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt CacheManager.cpp ConfigManager.cpp CThread.cpp FeedBackManager.cpp json_reader.cpp json_value.cpp json_writer.cpp LookUpManager.cpp
+         LookUpManager.cpp
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(67): error C2071: “hebi::Command::FloatField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(82): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(82): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(107): error C2071: “hebi::Command::HighResAngleField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(147): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(147): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(187): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(187): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(211): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(211): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(233): error C2071: “hebi::Command::StringField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(248): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(248): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(270): error C2071: “hebi::Command::FlagField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(282): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(282): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(306): error C2071: “hebi::Command::EnumField<T>::operator bool”: 非法的存储类
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(322): 参见对正在编译的类 模板 实例化“hebi::Command::EnumField<T>”的引用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(321): error C2253: “EnumField<T>”: 纯说明符或抽象重写说明符只允许在虚函数上使用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(378): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(378): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(414): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(414): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(474): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(474): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(592): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(592): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(700): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(700): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(808): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(808): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(306): error C2071: “hebi::Command::EnumField<T>::operator bool”: 非法的存储类
+                 with
+                 [
+                     T=hebi::Command::ControlStrategy
+                 ]
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(861): 参见对正在编译的类 模板 实例化“hebi::Command::EnumField<T>”的引用
+                 with
+                 [
+                     T=hebi::Command::ControlStrategy
+                 ]
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(321): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(321): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(863): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(863): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(912): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(912): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(954): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(954): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(979): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(1023): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(1023): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(1026): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(1026): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\group_command.hpp(50): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(53): error C2071: “hebi::Feedback::FloatField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(64): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(64): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(89): error C2071: “hebi::Feedback::HighResAngleField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(115): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(115): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(143): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(143): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(166): error C2071: “hebi::Feedback::Vector3fField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(177): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(177): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(217): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(217): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(238): error C2071: “hebi::Feedback::LedField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(248): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(248): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(296): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(296): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(376): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(376): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(408): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(408): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(433): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(476): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(476): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(479): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(479): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\group_feedback.hpp(58): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(67): error C2071: “hebi::Info::FloatField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(78): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(78): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(97): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(97): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(119): error C2071: “hebi::Info::StringField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(130): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(130): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(152): error C2071: “hebi::Info::FlagField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(160): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(160): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(184): error C2071: “hebi::Info::EnumField<T>::operator bool”: 非法的存储类
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(196): 参见对正在编译的类 模板 实例化“hebi::Info::EnumField<T>”的引用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(195): error C2253: “EnumField<T>”: 纯说明符或抽象重写说明符只允许在虚函数上使用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(217): error C2071: “hebi::Info::LedField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(227): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(227): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(317): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(317): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(397): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(397): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(477): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(477): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(184): error C2071: “hebi::Info::EnumField<T>::operator bool”: 非法的存储类
+                 with
+                 [
+                     T=hebi::Info::ControlStrategy
+                 ]
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(520): 参见对正在编译的类 模板 实例化“hebi::Info::EnumField<T>”的引用
+                 with
+                 [
+                     T=hebi::Info::ControlStrategy
+                 ]
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(195): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(195): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(522): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(522): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(563): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(563): fatal error C1003: 错误计数超过 100；正在停止编译
+         json_writer.cpp
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): warning C4996: 'Json::Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(143) : 参见“Json::Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(186): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(186): warning C4996: 'Json::Writer::write': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(147) : 参见“Json::Writer::write”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163): warning C4996: 'Json::FastWriter::document_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(182) : 参见“Json::FastWriter::document_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(186): warning C4996: 'Json::FastWriter::~FastWriter': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163) : 参见“Json::FastWriter::~FastWriter”的声明
+                 此诊断出现在编译器生成的函数“void *Json::FastWriter::__delDtor(unsigned int)”中
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163) : 参见“Json::FastWriter::~FastWriter”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(212): warning C4996: 'Json::Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(143) : 参见“Json::Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(246): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(246): warning C4996: 'Json::Writer::write': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(147) : 参见“Json::Writer::write”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(246): warning C4996: 'Json::StyledWriter::ChildValues': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(238) : 参见“Json::StyledWriter::ChildValues”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::childValues_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(240) : 参见“Json::StyledWriter::childValues_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::document_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(241) : 参见“Json::StyledWriter::document_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::indentString_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(242) : 参见“Json::StyledWriter::indentString_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(246): warning C4996: 'Json::StyledWriter::~StyledWriter': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215) : 参见“Json::StyledWriter::~StyledWriter”的声明
+                 此诊断出现在编译器生成的函数“void *Json::StyledWriter::__delDtor(unsigned int)”中
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215) : 参见“Json::StyledWriter::~StyledWriter”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::ChildValues': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(304) : 参见“Json::StyledStreamWriter::ChildValues”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::childValues_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(306) : 参见“Json::StyledStreamWriter::childValues_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::indentString_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(308) : 参见“Json::StyledStreamWriter::indentString_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::indentation_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(310) : 参见“Json::StyledStreamWriter::indentation_”的声明
+         json_value.cpp
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): warning C4996: 'Json::Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(143) : 参见“Json::Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(186): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(186): warning C4996: 'Json::Writer::write': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(147) : 参见“Json::Writer::write”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163): warning C4996: 'Json::FastWriter::document_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(182) : 参见“Json::FastWriter::document_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(186): warning C4996: 'Json::FastWriter::~FastWriter': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163) : 参见“Json::FastWriter::~FastWriter”的声明
+                 此诊断出现在编译器生成的函数“void *Json::FastWriter::__delDtor(unsigned int)”中
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163) : 参见“Json::FastWriter::~FastWriter”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(212): warning C4996: 'Json::Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(143) : 参见“Json::Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(246): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(246): warning C4996: 'Json::Writer::write': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(147) : 参见“Json::Writer::write”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(246): warning C4996: 'Json::StyledWriter::ChildValues': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(238) : 参见“Json::StyledWriter::ChildValues”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::childValues_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(240) : 参见“Json::StyledWriter::childValues_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::document_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(241) : 参见“Json::StyledWriter::document_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::indentString_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(242) : 参见“Json::StyledWriter::indentString_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(246): warning C4996: 'Json::StyledWriter::~StyledWriter': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215) : 参见“Json::StyledWriter::~StyledWriter”的声明
+                 此诊断出现在编译器生成的函数“void *Json::StyledWriter::__delDtor(unsigned int)”中
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215) : 参见“Json::StyledWriter::~StyledWriter”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::ChildValues': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(304) : 参见“Json::StyledStreamWriter::ChildValues”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::childValues_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(306) : 参见“Json::StyledStreamWriter::childValues_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::indentString_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(308) : 参见“Json::StyledStreamWriter::indentString_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::indentation_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(310) : 参见“Json::StyledStreamWriter::indentation_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\json_value.cpp(1203): warning C4996: 'Json::Value::removeMember':
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\value.h(522) : 参见“Json::Value::removeMember”的声明
+         json_reader.cpp
+         FeedBackManager.cpp
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(53): error C2071: “hebi::Feedback::FloatField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(64): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(64): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(89): error C2071: “hebi::Feedback::HighResAngleField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(115): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(115): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(143): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(143): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(166): error C2071: “hebi::Feedback::Vector3fField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(177): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(177): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(217): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(217): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(238): error C2071: “hebi::Feedback::LedField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(248): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(248): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(296): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(296): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(376): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(376): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(408): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(408): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(433): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(476): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(476): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(479): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(479): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\group_feedback.hpp(58): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(27): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(77): 参见对正在编译的类 模板 实例化“queue_safe<T>”的引用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(27): warning C4183: “threadsafe_queue”: 缺少返回类型；假定为返回“int”的成员函数
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(28): error C2061: 语法错误: 标识符“threadsafe_queue”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(29): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(29): error C2535: “int queue_safe<T>::threadsafe_queue(void)”: 已经定义或声明成员函数
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(27) : 参见“queue_safe<T>::threadsafe_queue”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(32): warning C4183: “threadsafe_queue”: 缺少返回类型；假定为返回“int”的成员函数
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(46): error C2143: 语法错误 : 缺少“;”(在“<”的前面)
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(46): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(47): error C2334: “{”的前面有意外标记；跳过明显的函数体
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(63): error C2143: 语法错误 : 缺少“;”(在“<”的前面)
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(63): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(64): error C2334: “{”的前面有意外标记；跳过明显的函数体
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): warning C4996: 'Json::Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(143) : 参见“Json::Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(186): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(186): warning C4996: 'Json::Writer::write': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(147) : 参见“Json::Writer::write”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163): warning C4996: 'Json::FastWriter::document_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(182) : 参见“Json::FastWriter::document_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(212): warning C4996: 'Json::Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(143) : 参见“Json::Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(246): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(246): warning C4996: 'Json::Writer::write': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(147) : 参见“Json::Writer::write”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(246): warning C4996: 'Json::StyledWriter::ChildValues': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(238) : 参见“Json::StyledWriter::ChildValues”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145) : 参见“Json::Writer::~Writer”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::childValues_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(240) : 参见“Json::StyledWriter::childValues_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::document_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(241) : 参见“Json::StyledWriter::document_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::indentString_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(242) : 参见“Json::StyledWriter::indentString_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::ChildValues': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(304) : 参见“Json::StyledStreamWriter::ChildValues”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::childValues_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(306) : 参见“Json::StyledStreamWriter::childValues_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::indentString_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(308) : 参见“Json::StyledStreamWriter::indentString_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::indentation_': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(310) : 参见“Json::StyledStreamWriter::indentation_”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(54): warning C4996: 'Json::FastWriter': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159) : 参见“Json::FastWriter”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(54): warning C4996: 'Json::FastWriter::~FastWriter': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163) : 参见“Json::FastWriter::~FastWriter”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(55): warning C4996: 'Json::FastWriter::write': Use StreamWriterBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(177) : 参见“Json::FastWriter::write”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(61): warning C4996: 'Json::Reader': Use CharReader and CharReaderBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(35) : 参见“Json::Reader”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(61): warning C4996: 'Json::Reader::Char': Use CharReader and CharReaderBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(37) : 参见“Json::Reader::Char”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(61): warning C4996: 'Json::Reader::Location': Use CharReader and CharReaderBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(38) : 参见“Json::Reader::Location”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(61): warning C4996: 'Json::Reader::Nodes': Use CharReader and CharReaderBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(236) : 参见“Json::Reader::Nodes”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(61): warning C4996: 'Json::Reader::Errors': Use CharReader and CharReaderBuilder instead
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(192) : 参见“Json::Reader::Errors”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(62): fatal error C1903: 无法从以前的错误中恢复；正在停止编译
+         CThread.cpp
+         ConfigManager.cpp
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(67): error C2071: “hebi::Command::FloatField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(82): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(82): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(107): error C2071: “hebi::Command::HighResAngleField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(147): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(147): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(187): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(187): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(211): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(211): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(233): error C2071: “hebi::Command::StringField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(248): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(248): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(270): error C2071: “hebi::Command::FlagField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(282): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(282): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(306): error C2071: “hebi::Command::EnumField<T>::operator bool”: 非法的存储类
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(322): 参见对正在编译的类 模板 实例化“hebi::Command::EnumField<T>”的引用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(321): error C2253: “EnumField<T>”: 纯说明符或抽象重写说明符只允许在虚函数上使用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(378): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(378): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(414): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(414): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(474): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(474): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(592): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(592): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(700): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(700): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(808): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(808): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(306): error C2071: “hebi::Command::EnumField<T>::operator bool”: 非法的存储类
+                 with
+                 [
+                     T=hebi::Command::ControlStrategy
+                 ]
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(861): 参见对正在编译的类 模板 实例化“hebi::Command::EnumField<T>”的引用
+                 with
+                 [
+                     T=hebi::Command::ControlStrategy
+                 ]
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(321): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(321): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(863): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(863): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(912): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(912): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(954): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(954): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(979): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(1023): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(1023): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(1026): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(1026): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\group_command.hpp(50): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(53): error C2071: “hebi::Feedback::FloatField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(64): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(64): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(89): error C2071: “hebi::Feedback::HighResAngleField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(115): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(115): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(143): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(143): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(166): error C2071: “hebi::Feedback::Vector3fField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(177): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(177): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(217): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(217): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(238): error C2071: “hebi::Feedback::LedField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(248): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(248): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(296): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(296): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(376): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(376): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(408): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(408): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(433): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(476): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(476): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(479): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(479): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\group_feedback.hpp(58): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(67): error C2071: “hebi::Info::FloatField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(78): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(78): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(97): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(97): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(119): error C2071: “hebi::Info::StringField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(130): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(130): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(152): error C2071: “hebi::Info::FlagField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(160): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(160): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(184): error C2071: “hebi::Info::EnumField<T>::operator bool”: 非法的存储类
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(196): 参见对正在编译的类 模板 实例化“hebi::Info::EnumField<T>”的引用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(195): error C2253: “EnumField<T>”: 纯说明符或抽象重写说明符只允许在虚函数上使用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(217): error C2071: “hebi::Info::LedField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(227): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(227): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(317): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(317): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(397): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(397): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(477): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(477): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(184): error C2071: “hebi::Info::EnumField<T>::operator bool”: 非法的存储类
+                 with
+                 [
+                     T=hebi::Info::ControlStrategy
+                 ]
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(520): 参见对正在编译的类 模板 实例化“hebi::Info::EnumField<T>”的引用
+                 with
+                 [
+                     T=hebi::Info::ControlStrategy
+                 ]
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(195): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(195): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(522): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(522): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(563): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(563): fatal error C1003: 错误计数超过 100；正在停止编译
+         CacheManager.cpp
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(27): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(77): 参见对正在编译的类 模板 实例化“queue_safe<T>”的引用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(27): warning C4183: “threadsafe_queue”: 缺少返回类型；假定为返回“int”的成员函数
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(28): error C2061: 语法错误: 标识符“threadsafe_queue”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(29): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(29): error C2535: “int queue_safe<T>::threadsafe_queue(void)”: 已经定义或声明成员函数
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(27) : 参见“queue_safe<T>::threadsafe_queue”的声明
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(32): warning C4183: “threadsafe_queue”: 缺少返回类型；假定为返回“int”的成员函数
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(46): error C2143: 语法错误 : 缺少“;”(在“<”的前面)
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(46): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(47): error C2334: “{”的前面有意外标记；跳过明显的函数体
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(63): error C2143: 语法错误 : 缺少“;”(在“<”的前面)
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(63): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\queue_safe.h(64): error C2334: “{”的前面有意外标记；跳过明显的函数体
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(67): error C2071: “hebi::Command::FloatField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(82): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(82): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(107): error C2071: “hebi::Command::HighResAngleField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(147): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(147): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(187): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(187): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(211): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(211): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(233): error C2071: “hebi::Command::StringField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(248): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(248): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(270): error C2071: “hebi::Command::FlagField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(282): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(282): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(306): error C2071: “hebi::Command::EnumField<T>::operator bool”: 非法的存储类
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(322): 参见对正在编译的类 模板 实例化“hebi::Command::EnumField<T>”的引用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(321): error C2253: “EnumField<T>”: 纯说明符或抽象重写说明符只允许在虚函数上使用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(378): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(378): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(414): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(414): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(474): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(474): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(592): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(592): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(700): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(700): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(808): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(808): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(306): error C2071: “hebi::Command::EnumField<T>::operator bool”: 非法的存储类
+                 with
+                 [
+                     T=hebi::Command::ControlStrategy
+                 ]
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(861): 参见对正在编译的类 模板 实例化“hebi::Command::EnumField<T>”的引用
+                 with
+                 [
+                     T=hebi::Command::ControlStrategy
+                 ]
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(321): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(321): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(863): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(863): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(912): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(912): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(954): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(954): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(979): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(1023): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(1023): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(1026): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.hpp(1026): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\group_command.hpp(50): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(53): error C2071: “hebi::Feedback::FloatField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(64): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(64): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(89): error C2071: “hebi::Feedback::HighResAngleField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(115): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(115): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(143): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(143): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(166): error C2071: “hebi::Feedback::Vector3fField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(177): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(177): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(217): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(217): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(238): error C2071: “hebi::Feedback::LedField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(248): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(248): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(296): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(296): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(376): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(376): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(408): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(408): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(433): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(476): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(476): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(479): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.hpp(479): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\group_feedback.hpp(58): error C3646: “noexcept”: 未知重写说明符
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(67): error C2071: “hebi::Info::FloatField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(78): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(78): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(97): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(97): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(119): error C2071: “hebi::Info::StringField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(130): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(130): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(152): error C2071: “hebi::Info::FlagField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(160): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(160): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(184): error C2071: “hebi::Info::EnumField<T>::operator bool”: 非法的存储类
+                 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(196): 参见对正在编译的类 模板 实例化“hebi::Info::EnumField<T>”的引用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(195): error C2253: “EnumField<T>”: 纯说明符或抽象重写说明符只允许在虚函数上使用
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(217): error C2071: “hebi::Info::LedField::operator bool”: 非法的存储类
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(227): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(227): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(317): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(317): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(397): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(397): error C2238: 意外的标记位于“;”之前
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(477): error C2059: 语法错误:“;”
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\info.hpp(477): fatal error C1003: 错误计数超过 100；正在停止编译
+         正在生成代码...
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\cthread.cpp(59): error C4716: “CThread::swap”: 必须返回一个值
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\cthread.cpp(60): error C4716: “CThread::get_id”: 必须返回一个值
+     1>e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\cthread.cpp(61): error C4716: “CThread::joinable”: 必须返回一个值
+     1>已完成生成项目“E:\tools\project\RMCS_PROXY_DEMO\RMCS_PROXY_DEMO\RMCS_PROXY_DEMO.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:10.47
