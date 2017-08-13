@@ -17,7 +17,7 @@
  * T为队列元素类型
  * 因为有std::mutex和std::condition_variable类成员,所以此类不支持复制构造函数也不支持赋值操作符(=)
  * */
-template<typename T>
+template<class T>
 class queue_safe{
 private:  
 	mutable std::mutex mut;   

@@ -1,0 +1,138 @@
+﻿生成启动时间为 2017/8/13 2:25:59。
+     1>项目“F:\tools2\redis-2.6\msvs\RedisServer.vcxproj”在节点 3 上(Build 个目标)。
+     1>ClCompile:
+         E:\tools\visualStudio2012\VC\bin\CL.exe /c /I"F:\tools2\redis-2.6\msvs\..\deps\lua\src" /I"F:\tools2\redis-2.6\msvs\..\deps\hiredis" /Zi /nologo /W3 /WX- /Od /Oy- /D _WIN32IOCP /D WIN32 /D _DEBUG /D _CONSOLE /D __x86_64__ /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /wd4996 /wd4146 /analyze- /errorReport:prompt ..\src\adlist.c ..\src\ae.c ..\src\anet.c ..\src\aof.c ..\src\bio.c ..\src\bitops.c ..\src\config.c ..\src\crc64.c ..\src\db.c ..\src\debug.c ..\src\dict.c ..\src\endianconv.c ..\src\intset.c ..\src\lzf_c.c ..\src\lzf_d.c ..\src\memtest.c ..\src\migrate.c ..\src\multi.c ..\src\networking.c ..\src\object.c ..\src\pqsort.c ..\src\pubsub.c ..\src\rand.c ..\src\rdb.c ..\src\redis.c ..\src\release.c ..\src\replication.c ..\src\rio.c ..\src\scripting.c ..\src\sds.c ..\src\sentinel.c ..\src\sha1.c ..\src\slowlog.c ..\src\sort.c ..\src\syncio.c ..\src\t_hash.c ..\src\t_list.c ..\src\t_set.c ..\src\t_string.c ..\src\t_zset.c ..\src\util.c ..\src\win32fixes.c ..\src\win32_bksv.c ..\src\win32_cow.c ..\src\win32_wsiocp.c ..\src\ziplist.c ..\src\zipmap.c ..\src\zmalloc.c
+         zmalloc.c
+         zipmap.c
+         ziplist.c
+         win32_wsiocp.c
+         win32_cow.c
+         win32_bksv.c
+         win32fixes.c
+         util.c
+         t_zset.c
+         t_string.c
+         t_set.c
+         t_list.c
+         t_hash.c
+         syncio.c
+         sort.c
+         slowlog.c
+         sha1.c
+         sentinel.c
+         sds.c
+         scripting.c
+         正在生成代码...
+         正在编译...
+         rio.c
+         replication.c
+         release.c
+         redis.c
+         rdb.c
+         rand.c
+         pubsub.c
+         pqsort.c
+         object.c
+         networking.c
+         multi.c
+         migrate.c
+         memtest.c
+         lzf_d.c
+         lzf_c.c
+         intset.c
+         endianconv.c
+         dict.c
+         debug.c
+         db.c
+         正在生成代码...
+         正在编译...
+         crc64.c
+         config.c
+     1>..\src\config.c(342): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(344): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(346): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(348): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(350): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(352): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(354): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(386): warning C4244: “=”: 从“__int64”转换到“unsigned long”，可能丢失数据
+     1>..\src\config.c(546): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+     1>..\src\config.c(550): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+     1>..\src\config.c(554): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+     1>..\src\config.c(585): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+     1>..\src\config.c(604): warning C4244: “=”: 从“__int64”转换到“long”，可能丢失数据
+     1>..\src\config.c(619): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+     1>..\src\config.c(640): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(643): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(646): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(649): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(652): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(655): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(658): warning C4244: “=”: 从“__int64”转换到“size_t”，可能丢失数据
+     1>..\src\config.c(703): warning C4244: “=”: 从“__int64”转换到“long”，可能丢失数据
+     1>..\src\config.c(719): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+     1>..\src\config.c(733): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+     1>..\src\config.c(736): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+     1>..\src\config.c(761): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+         bitops.c
+         bio.c
+         aof.c
+         anet.c
+         ae.c
+         adlist.c
+         正在生成代码...
+       Link:
+         E:\tools\visualStudio2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\tools2\redis-2.6\msvs\Debug\redis-server.exe" /INCREMENTAL /NOLOGO /LIBPATH:"F:\tools2\redis-2.6\msvs\Debug\\" /LIBPATH:"F:\tools2\redis-2.6\msvs\Debug\lib" lua.lib hiredis.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib advapi32.lib shell32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST:NO /DEBUG /PDB:"F:\tools2\redis-2.6\msvs\Debug\redis-server.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\tools2\redis-2.6\msvs\Debug\redis-server.lib" /MACHINE:X86 Debug\adlist.obj
+         Debug\ae.obj
+         Debug\anet.obj
+         Debug\aof.obj
+         Debug\bio.obj
+         Debug\bitops.obj
+         Debug\config.obj
+         Debug\crc64.obj
+         Debug\db.obj
+         Debug\debug.obj
+         Debug\dict.obj
+         Debug\endianconv.obj
+         Debug\intset.obj
+         Debug\lzf_c.obj
+         Debug\lzf_d.obj
+         Debug\memtest.obj
+         Debug\migrate.obj
+         Debug\multi.obj
+         Debug\networking.obj
+         Debug\object.obj
+         Debug\pqsort.obj
+         Debug\pubsub.obj
+         Debug\rand.obj
+         Debug\rdb.obj
+         Debug\redis.obj
+         Debug\release.obj
+         Debug\replication.obj
+         Debug\rio.obj
+         Debug\scripting.obj
+         Debug\sds.obj
+         Debug\sentinel.obj
+         Debug\sha1.obj
+         Debug\slowlog.obj
+         Debug\sort.obj
+         Debug\syncio.obj
+         Debug\t_hash.obj
+         Debug\t_list.obj
+         Debug\t_set.obj
+         Debug\t_string.obj
+         Debug\t_zset.obj
+         Debug\util.obj
+         Debug\win32fixes.obj
+         Debug\win32_bksv.obj
+         Debug\win32_cow.obj
+         Debug\win32_wsiocp.obj
+         Debug\ziplist.obj
+         Debug\zipmap.obj
+         Debug\zmalloc.obj
+         RedisServer.vcxproj -> F:\tools2\redis-2.6\msvs\Debug\redis-server.exe
+     1>已完成生成项目“F:\tools2\redis-2.6\msvs\RedisServer.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:11.73

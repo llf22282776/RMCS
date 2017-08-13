@@ -24,7 +24,11 @@ public:
 
 
 
-	InitManager();
+	InitManager() {
+	
+	
+	
+	}
 	static int main(){
 		queue_safe<GroupfeedbackCustomStruct> gfd_queue;
 		queue_safe<GroupStruct> gs_queue;
@@ -53,17 +57,16 @@ public:
 
 		
 	}
-	~InitManager();
+	~InitManager() {
+	
+	
+	
+	}
 
 private:
 
 };
-class ConfigReader{
 
-
-
-
-};
 
 
 

@@ -101,14 +101,17 @@ ConfigManager::ConfigManager(string filePath):groupList(),redisList(),dbList() {
 		}
 	}
 }
-ConfigManager::~ConfigManager() {}
+ConfigManager::~ConfigManager() {
+
+
+}
 
 vector<GroupStruct> ConfigManager::getGroupList() {
 	return groupList;
 }
 
-vector<RedisCofig> ConfigManager::getRedisList(){return this->getRedisList();}
-vector<DBconfig> ConfigManager::getDbConfig(){return this->getDbConfig();}
+vector<RedisCofig> ConfigManager::getRedisList(){return this->redisList;}
+vector<DBconfig> ConfigManager::getDbConfig(){return this->dbList;}
 /*
 // Test Demo
 int main(void) {

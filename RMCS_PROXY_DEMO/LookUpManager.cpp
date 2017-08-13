@@ -2,15 +2,15 @@
 #include "src/lookup.hpp"
 #include "ConfigManager.h"
 #include "FeedBackManager.h"
+#define D_S_T 50
 using namespace std;
 using namespace hebi;
 LookUpManager::LookUpManager(CacheManager& cacheManager_,
 							 queue_safe<GroupfeedbackCustomStruct>& groupFeedbackQueue_,
 							 Lookup& lookup_,
-							 
 							 ConfigManager& configManager_,
-							 int sleep_time_=DEAULT_SLEEP_TIME
-							 )
+							 int sleep_time_
+)
 	:cacheManager(cacheManager_)
 	,groupFeedbackQueue(groupFeedbackQueue_)
 	,lookup(lookup_)
@@ -130,7 +130,7 @@ vector<GroupStruct> LookUpManager::getGroupsStateFromHeibi(vector<GroupStruct> g
 			//遍历Map
 			vector<NameStruct>& nameListMap=groupVec.at(i).getFamilyList().at(j).getNameList();
 			vector<NameStruct>::iterator it;
-			for(it=nameListMap.begin;it!=nameListMap.end();it++){
+			for(it=nameListMap.begin();it!=nameListMap.end();it++){
 				unique_ptr<Group> grp=this->lookup.getConnectedGroupFromName(it->name,familyName);
 				if(grp){
 					it->connected=true;//更新状态为true

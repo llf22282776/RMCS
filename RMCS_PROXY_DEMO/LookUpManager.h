@@ -4,14 +4,16 @@
 #include <map>
 #include <vector>
 #include <string>
+#include <iostream>
+#include <chrono>
 #include "src/lookup.hpp"
-using namespace std;
 #include "CacheManager.h"
 #include "queue_safe.h"
-#include <list>
 #include "FeedBackManager.h"
 #include "ConfigManager.h"
 #include "JsonObjectBase.h"
+#include "common.h"
+using namespace std;
 class LookUpManager:public CThread{
 	//这里是lLookUpManager管理类
 	//它是个线程类
@@ -32,7 +34,7 @@ private:
 
 	//group会增加和减少,会不会影响什么？估计不会
 	map<string,unique_ptr<hebi::Group>> cacheGroupMap;//需要更新的map,从缓存里面取，如果key没有就取一下addFh,有就不管
-	vector<FeedBackManager&> feedbackManagerVec;
+	vector<FeedBackManager> feedbackManagerVec;
 	vector<GroupStruct> fixedGroup;
 	CacheManager& cacheManager;
 	ConfigManager& configManager;
@@ -67,7 +69,7 @@ public:
 		queue_safe<GroupfeedbackCustomStruct>& groupFeedbackQueue,
 		Lookup& lookup_,
 		ConfigManager& configManager_,
-		int sleep_time=DEAULT_SLEEP_TIME
+		int sleep_time_=DEAULT_SLEEP_TIME
 
 		);
 	//需要什么参数,缓存管理类，简单，不需要信息沟通,没必要生产者消费者模型,
@@ -77,77 +79,11 @@ public:
 	~LookUpManager();
 	void run() override; // override run function,to find 
 	void init() ;//init the lookupManager,比如跑起来
-	hebi::Lookup getLookUp(){return this->lookup;}
+	hebi::Lookup& getLookUp(){return this->lookup;}
 	//-------------------
 	static const int  DEAULT_SLEEP_TIME=50; //默认的休眠时间
 
 
 }; 
-
-class FamilyStruct :public CJsonObjectBase{
-private:
-	string name;
-	vector<NameStruct> nameList;
-
-public:
-	FamilyStruct() {
-
-	}
-	FamilyStruct(string name) { this->name = name; }
-	~FamilyStruct() {}
-	void setName(string name) { this->name = name; }
-	string getName() { return name; }
-	void addName(string name) {
-		NameStruct name_(name,false);
-		nameList.push_back(name_);
-		// Get all the names of members in a string, with ';' as spliter
-	}
-	void setNameList(vector<NameStruct> namelist) { 
-		this->nameList = namelist;		
-	}
-	vector<NameStruct>   getNameList() { return nameList; }
-	virtual void SetPropertys(){
-		//
-		this->SetProperty("name",CJsonObjectBase::asString,&(this->name));
-		this->SetProperty("nameList",CJsonObjectBase::asVectorArray,&(this->nameList));
-	}
-};
-
-class NameStruct:public CJsonObjectBase{
-
-public:
-	string name;
-	bool connected;
-	NameStruct(string name_,bool connect_):name(name_),connected(connect_){}
-	~NameStruct(){}
-	virtual void SetPropertys(){
-		//
-		this->SetProperty("name",CJsonObjectBase::asString,&(this->name));
-		this->SetProperty("connected",CJsonObjectBase::asBool,&(this->connected));
-	}
-};
-class GroupStruct:public CJsonObjectBase{
-private:
-	string name;
-	vector<FamilyStruct> familyList;
-	//初始表初始化
-
-public:
-	GroupStruct():familyList(),name(""),isConnected(false){}
-	GroupStruct(string name_) :familyList(),name(name_),isConnected(false){}
-	~GroupStruct() {}
-	void setName(string name) { this->name = name; }
-	string getName() { return name; }
-	void addFamily(FamilyStruct family) {
-		familyList.push_back(family);
-	}
-	vector<FamilyStruct> getFamilyList() { return familyList; }
-	virtual void SetPropertys(){
-		//
-		this->SetProperty("name",CJsonObjectBase::asString,&(this->name));
-		this->SetProperty("familyList",CJsonObjectBase::asVectorArray,&(this->familyList));
-	}
-
-};
 
 #endif

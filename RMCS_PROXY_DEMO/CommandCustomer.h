@@ -2,38 +2,19 @@
 #define COMMANDCUSTOMER_H
 #include "CThread.h"
 #include <string>
-#include "LookUpManager.h"
-#include "FeedBackManager.h"
-#include "ConfigManager.h"
+#include "queue_safe.h"
 #include "JsonObjectBase.h"
-class CommandStruct:public CJsonObjectBase{
-public:
-	string cmd;
-	string groupName;
-	vector<string> familys;
-	vector<string> names;
-	vector<float> vel;
-	vector<float> t;
-	vector<float> p;
-	vector<float> vol;
-	FeedbackCustomStruct fd;
-	CommandStruct(FeedbackCustomStruct fd_):fd(fd_){
+#include "common.h"
+#include "group.hpp"
+#include "group_command.hpp"
+#include "group_feedback.hpp"
+#include "src/lookup.hpp"
+#include "src/feedback.hpp"
+#include "src/command.hpp"
 
-	}
-	virtual void SetPropertys(){
-		this->SetProperty("cmd",asString,&cmd);
-		this->SetProperty("groupName",asString,&groupName);
-		this->SetProperty("familys",asVectorArray,&familys);
-		this->SetProperty("names",asVectorArray,&names);
-		this->SetProperty("vel",asVectorArray,&vel);
-		this->SetProperty("t",asVectorArray,&t);
-		this->SetProperty("p",asVectorArray,&p);
-		this->SetProperty("vol",asVectorArray,&vol);
-		this->SetProperty("fd",asJsonObj,&fd);
-
-	}
-
-};
+#include "ConfigManager.h"
+#include "LookUpManager.h"
+using namespace  std;
 class CommandCustomer:public CThread
 {
 
@@ -49,7 +30,12 @@ public:
 
 
 	}
-	~CommandCustomer();
+	~CommandCustomer() {
+	
+	
+	
+	
+	}
 	void run() override; //ÖØÐ´run
 	void init(){
 		this->start();
@@ -90,7 +76,7 @@ public:
 		{
 			std::cout << "send time out" << std::endl;
 		}
-
+		return true;
 	}
 private:
 	queue_safe<CommandStruct>& command_struct_queue;
@@ -110,7 +96,7 @@ void CommandCustomer::run(){
 
 	}
 
-}
+};
 
 
 #endif // !

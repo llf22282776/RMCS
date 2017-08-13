@@ -1,4 +1,6 @@
 #include "FeedBackCustomer.h"
+
+
 void FeedBackCustomer::run(){
 	while (true)
 	{
@@ -13,7 +15,7 @@ void FeedBackCustomer::run(){
 
 }
 
-void FeedBackCustomer:: init(){
+void FeedBackCustomer::init(){
 
 	this->start();//跑起来
 } //初始化
@@ -37,7 +39,7 @@ bool FeedBackCustomer:: insertCache(GroupfeedbackCustomStruct& gfd){
 }//放进缓存里面
 bool FeedBackCustomer:: insertDb(int type,GroupfeedbackCustomStruct& gfd){
 	cout<<"put into db!!!"<<endl;
-
+	return true;
 
 
 }//放进数据库里面

@@ -8,9 +8,9 @@
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/xml_parser.hpp>
 #include <boost/foreach.hpp>
-#include "LookUpManager.h"
-#include <map>
 
+#include <map>
+#include "common.h"
 using namespace std;
 using namespace boost::property_tree;
 
@@ -28,19 +28,5 @@ public:
 	vector<RedisCofig> getRedisList();
 	vector<DBconfig> getDbConfig();
 };
-class RedisCofig{
-	public:
-		string ip;
-		int port;
-};
-class DBconfig{
-	public:
-		string user;
-		string pwd;
-		string ip;
-		int port;
-		string dbSchme;
-		map<string,string> parmMap;
-		DBconfig():parmMap(){}
-};
+
 #endif // !ConfigManager_H
