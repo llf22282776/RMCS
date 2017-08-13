@@ -19,18 +19,15 @@ public:
 
 	}
 	void run() override;
-	void init() ;
+	void init() {
+		this->start();
+	}
 private:
 
 
 
 };
-void DataBaseManager::run(){
 
-
-
-
-}
 class DataBaseConnection{
 	//这个类封装了对数据库的连接，获取connection对象
 	//init函数解决和数据库连接,返回真假

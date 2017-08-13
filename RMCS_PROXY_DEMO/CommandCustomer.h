@@ -5,19 +5,13 @@
 #include "queue_safe.h"
 #include "JsonObjectBase.h"
 #include "common.h"
-#include "group.hpp"
-#include "group_command.hpp"
-#include "group_feedback.hpp"
-#include "src/lookup.hpp"
-#include "src/feedback.hpp"
-#include "src/command.hpp"
+
 
 #include "ConfigManager.h"
 #include "LookUpManager.h"
 using namespace  std;
 class CommandCustomer:public CThread
 {
-
 	//这是一个线程类，
 	//不停的消耗commandQueue队列中的内容
 	//commandQueue队列中，每一个元素，都指定了要发给命令的group或者其中的module
@@ -89,7 +83,7 @@ void CommandCustomer::run(){
 	while (true)
 	{
 
-		customCommand();
+		this->customCommand();
 		if(this->sleeptime>0){
 			this_thread::sleep_for(std::chrono::milliseconds(this->sleeptime));
 		}

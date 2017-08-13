@@ -1,25 +1,16 @@
 #ifndef CACHEMANAGER_H
 #define CACHEMANAGER_H
 #include "CThread.h"
-
+#include "common.h"
 #include <string>
 #include "queue_safe.h"
 #include <map>
 #include <vector>
 #include <mutex>
 #include <condition_variable>
-#include "fmacros.h"
-#include "common.h"
 
 
-#include <ICRSINT.H>
-#include <windows.h>
 using namespace std;
-
-
-
-
-
 class CacheManager:public CThread
 {
 	/**
@@ -33,7 +24,7 @@ private:
 	queue_safe<map<string,vector<string>>> family_name_queue;
 	queue_safe<vector<GroupStruct>> group_struct_queue;//主要用来刷
 	queue_safe<GroupfeedbackCustomStruct> group_feedback_queue;
-	mutable std::mutex mut;   
+	
 	bool canUseRedis;
 
 	std::condition_variable data_cond;  

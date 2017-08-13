@@ -4,10 +4,10 @@
 *  - added wstrtod to handle INF, NAN
 *  - added support for using IOCP with sockets
 */
-
+#define NO_QFORKIMPL
 #ifndef WIN32FIXES_H
 #define WIN32FIXES_H
-#define NO_QFORKIMPL
+
 #pragma warning(error: 4005)
 #pragma warning(error: 4013)
 

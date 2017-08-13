@@ -1,4 +1,5 @@
 #include "FeedBackManager.h"
+#include "include/json/json.h"
 
 FeedBackManager::FeedBackManager(queue_safe<GroupfeedbackCustomStruct>& group_feedback_queue_):
 	group_feedback_queue(group_feedback_queue_){

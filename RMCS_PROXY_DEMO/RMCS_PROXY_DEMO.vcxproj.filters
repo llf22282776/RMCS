@@ -74,10 +74,10 @@
     <ClCompile Include="FeedBackCustomer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CommandCustomer.cpp">
+    <ClCompile Include="InitManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="win32fixes.c">
+    <ClCompile Include="DataBaseManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -35,13 +35,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CacheManager.cpp" />
-    <ClCompile Include="CommandCustomer.cpp" />
     <ClCompile Include="ConfigManager.cpp" />
     <ClCompile Include="CThread.cpp" />
+    <ClCompile Include="DataBaseManager.cpp" />
     <ClCompile Include="FeedBackCustomer.cpp" />
     <ClCompile Include="FeedBackManager.cpp" />
+    <ClCompile Include="InitManager.cpp" />
     <ClCompile Include="LookUpManager.cpp" />
-    <ClCompile Include="win32fixes.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A406C413-D7CC-4251-A1D9-40B6FF857EA4}</ProjectGuid>
@@ -91,27 +91,30 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)hiredis;$(ProjectDir)include\src;$(ProjectDir)include\src\Win32_Interop;$(ProjectDir)hiredis\adapters;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)lib\win_x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)lib\win_x86;$(LibraryPath)</LibraryPath>
     <SourcePath>$(ProjectDir)src;$(ProjectDir);$(ProjectDir)include\src;$(SourcePath)</SourcePath>
-    <ReferencePath>$(ProjectDir)lib\win_x64;$(ReferencePath)</ReferencePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)hiredis;$(ProjectDir)include\src;$(ProjectDir)include\src\Win32_Interop;$(ProjectDir)hiredis\adapters;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir);$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)lib\win_x64;$(LibraryPath)</LibraryPath>
-    <SourcePath>$(ProjectDir)src;$(ProjectDir);$(ProjectDir)include\src;$(SourcePath)</SourcePath>
-    <ReferencePath>$(ProjectDir)lib\win_x64;$(ReferencePath)</ReferencePath>
+    <SourcePath>$(ProjectDir)src;$(ProjectDir);$(SourcePath)</SourcePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>E:\tools\boost_1_61_0</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>pthreadVC2.lib;hebi.lib;hiredis.lib;Win32_Interop.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>hebi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>E:\tools\boost_1_61_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -123,7 +126,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>pthreadVC2.lib;hebi.lib;hiredis.lib;Win32_Interop.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>hebi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>E:\tools\boost_1_61_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

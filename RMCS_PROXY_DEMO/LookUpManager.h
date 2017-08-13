@@ -14,6 +14,7 @@
 #include "JsonObjectBase.h"
 #include "common.h"
 using namespace std;
+using namespace hebi;
 class LookUpManager:public CThread{
 	//这里是lLookUpManager管理类
 	//它是个线程类

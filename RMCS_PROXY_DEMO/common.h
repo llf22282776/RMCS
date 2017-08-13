@@ -7,29 +7,34 @@
 #define ADD_VALUE_TO_SET  "add_value_to_set"
 #define DELETE_VALUE_TO_SET "delete_value_to_set"
 #define SET_STR "set_str"
-#include "hiredis/hiredis.h"
-#define NO_QFORKIMPL //这一行必须加才能正常使用
+
+//#include "hiredis/hiredis.h"
 #include <iostream>
+
 #include <stdlib.h>
 #include <stdio.h>
-#include "include/src/Win32_Interop/win32fixes.h"
+#include <mutex>
+//#define NO_QFORKIMPL //这一行必须加才能正常使用
+
+//#include "src/Win32_Interop/win32fixes.h"
 #include <vector>
 
+
 using namespace std;
-class NameStruct :public CJsonObjectBase {
+class NameStruct   {
 
 public:
 	string name;
 	bool connected;
 	NameStruct(string name_, bool connect_) :name(name_), connected(connect_) {}
 	~NameStruct() {}
-	virtual void SetPropertys() {
-		//
-		this->SetProperty("name", CJsonObjectBase::asString, &(this->name));
-		this->SetProperty("connected", CJsonObjectBase::asBool, &(this->connected));
-	}
+// 	virtual void SetPropertys() {
+// 		//
+// 		this->SetProperty("name", CJsonObjectBase::asString, &(this->name));
+// 		this->SetProperty("connected", CJsonObjectBase::asBool, &(this->connected));
+// 	}
 };
-class FamilyStruct :public CJsonObjectBase {
+class FamilyStruct   {
 private:
 	string name;
 	vector<NameStruct> nameList;
@@ -51,15 +56,15 @@ public:
 		this->nameList = namelist;
 	}
 	vector<NameStruct>   getNameList() { return nameList; }
-	virtual void SetPropertys() {
-		//
-		this->SetProperty("name", CJsonObjectBase::asString, &(this->name));
-		this->SetProperty("nameList", CJsonObjectBase::asVectorArray, &(this->nameList));
-	}
+// 	virtual void SetPropertys() {
+// 		//
+// 		this->SetProperty("name", CJsonObjectBase::asString, &(this->name));
+// 		this->SetProperty("nameList", CJsonObjectBase::asVectorArray, &(this->nameList));
+// 	}
 };
 
 
-class GroupStruct :public CJsonObjectBase {
+class GroupStruct   {
 private:
 	string name;
 	vector<FamilyStruct> familyList;
@@ -75,15 +80,15 @@ public:
 		familyList.push_back(family);
 	}
 	vector<FamilyStruct> getFamilyList() { return familyList; }
-	virtual void SetPropertys() {
-		//
-		this->SetProperty("name", CJsonObjectBase::asString, &(this->name));
-		this->SetProperty("familyList", CJsonObjectBase::asVectorArray, &(this->familyList));
-	}
+// 	virtual void SetPropertys() {
+// 		//
+// 		this->SetProperty("name", CJsonObjectBase::asString, &(this->name));
+// 		this->SetProperty("familyList", CJsonObjectBase::asVectorArray, &(this->familyList));
+// 	}
 
 };
 
-class Led_field :public CJsonObjectBase {
+class Led_field   {
 public:
 	int led_R;
 	int led_G;
@@ -91,16 +96,16 @@ public:
 	Led_field(uint8_t R, uint8_t G, uint8_t B) :led_R(R), led_G(G), led_B(B) {
 
 	}
-	virtual void SetPropertys() {
-		this->SetProperty("led_R", asInt, &led_R);
-		this->SetProperty("led_G", asInt, &led_G);
-		this->SetProperty("led_B", asInt, &led_B);
-	}
+// 	virtual void SetPropertys() {
+// 		this->SetProperty("led_R", asInt, &led_R);
+// 		this->SetProperty("led_G", asInt, &led_G);
+// 		this->SetProperty("led_B", asInt, &led_B);
+// 	}
 	~Led_field() {
 
 	}
 };
-class Actuator_field :public CJsonObjectBase {
+class Actuator_field   {
 
 public:
 	double position;
@@ -113,17 +118,17 @@ public:
 
 
 	}
-	virtual void SetPropertys() {
-		this->SetProperty("position", asDouble, &position);
-		this->SetProperty("velocity", asDouble, &velocity);
-		this->SetProperty("torque", asDouble, &torque);
-		this->SetProperty("voltage", asDouble, &voltage);
-	}
+// 	virtual void SetPropertys() {
+// 		this->SetProperty("position", asDouble, &position);
+// 		this->SetProperty("velocity", asDouble, &velocity);
+// 		this->SetProperty("torque", asDouble, &torque);
+// 		this->SetProperty("voltage", asDouble, &voltage);
+// 	}
 
 };
 //group里面module的重置格式
 //反正只要我们需要的就好
-class FeedbackCustomStruct :public CJsonObjectBase {
+class FeedbackCustomStruct   {
 
 public:
 
@@ -132,18 +137,18 @@ public:
 	FeedbackCustomStruct(Led_field l_f, Actuator_field a_f) :led_field(l_f.led_R, l_f.led_G, l_f.led_B), actuator_field(a_f.position, a_f.velocity, a_f.torque, a_f.voltage) {
 
 	}
-	virtual void SetPropertys() {
-		this->SetProperty("led_field", asJsonObj, &led_field);
-		this->SetProperty("actuator_field", asJsonObj, &actuator_field);
-
-	}
+// 	virtual void SetPropertys() {
+// 		this->SetProperty("led_field", asJsonObj, &led_field);
+// 		this->SetProperty("actuator_field", asJsonObj, &actuator_field);
+// 
+// 	}
 	~FeedbackCustomStruct() {
 
 
 	}
 };
 //groupFeedBack的重置格式
-class GroupfeedbackCustomStruct :public CJsonObjectBase {
+class GroupfeedbackCustomStruct   {
 
 
 
@@ -164,14 +169,14 @@ public:
 	{
 
 	}
-	virtual void SetPropertys() {
-		this->SetProperty("positionsVec", CJsonObjectBase::asVectorArray, &positionsVec);
-		this->SetProperty("velocitysVec", CJsonObjectBase::asVectorArray, &velocitysVec);
-		this->SetProperty("torqueVec", CJsonObjectBase::asVectorArray, &torqueVec);
-		this->SetProperty("groupName", CJsonObjectBase::asString, &groupName);
-		this->SetProperty("moduleFeedBackVec", CJsonObjectBase::asVectorArray, &moduleFeedBackVec);
-
-	}
+// 	virtual void SetPropertys() {
+// 		this->SetProperty("positionsVec", CJsonObjectBase::asVectorArray, &positionsVec);
+// 		this->SetProperty("velocitysVec", CJsonObjectBase::asVectorArray, &velocitysVec);
+// 		this->SetProperty("torqueVec", CJsonObjectBase::asVectorArray, &torqueVec);
+// 		this->SetProperty("groupName", CJsonObjectBase::asString, &groupName);
+// 		this->SetProperty("moduleFeedBackVec", CJsonObjectBase::asVectorArray, &moduleFeedBackVec);
+// 
+// 	}
 	~GroupfeedbackCustomStruct() {
 
 	}
@@ -182,7 +187,7 @@ public:
 
 
 };
-class CommandStruct :public CJsonObjectBase {
+class CommandStruct   {
 public:
 	string cmd;
 	string groupName;
@@ -196,18 +201,18 @@ public:
 	CommandStruct(FeedbackCustomStruct fd_) :fd(fd_) {
 
 	}
-	virtual void SetPropertys() {
-		this->SetProperty("cmd", asString, &cmd);
-		this->SetProperty("groupName", asString, &groupName);
-		this->SetProperty("familys", asVectorArray, &familys);
-		this->SetProperty("names", asVectorArray, &names);
-		this->SetProperty("vel", asVectorArray, &vel);
-		this->SetProperty("t", asVectorArray, &t);
-		this->SetProperty("p", asVectorArray, &p);
-		this->SetProperty("vol", asVectorArray, &vol);
-		this->SetProperty("fd", asJsonObj, &fd);
-
-	}
+// 	virtual void SetPropertys() {
+// 		this->SetProperty("cmd", asString, &cmd);
+// 		this->SetProperty("groupName", asString, &groupName);
+// 		this->SetProperty("familys", asVectorArray, &familys);
+// 		this->SetProperty("names", asVectorArray, &names);
+// 		this->SetProperty("vel", asVectorArray, &vel);
+// 		this->SetProperty("t", asVectorArray, &t);
+// 		this->SetProperty("p", asVectorArray, &p);
+// 		this->SetProperty("vol", asVectorArray, &vol);
+// 		this->SetProperty("fd", asJsonObj, &fd);
+// 
+// 	}
 
 };
 class RedisCofig {
@@ -235,7 +240,10 @@ class CacheConnection {
 private:
 	string ip;
 	int port;
-	redisContext* rdc;
+	//redisContext* rdc;
+	char* rdc;
+	mutable std::mutex mut;
+	
 public:
 	CacheConnection(string ip_, int port_) :ip(ip_), port(port_), rdc(NULL) {}
 	~CacheConnection() {
@@ -245,27 +253,34 @@ public:
 
 
 	bool connect() {
-		const string ip_ = this->ip;
-		rdc = redisConnect(this->ip.data(), this->port);
-		return rdc == NULL ? false : true;
+	
+// 		const string ip_ = this->ip;
+// 		rdc = redisConnect(this->ip.data(), this->port);
+// 		return rdc == NULL ? false : true;
+		return false;
 
 	}//连接
 	bool reconnect() {
-		if (this->isConnected()) {
-			return true;
-
-		}
-		else
-		{
-			const string ip_ = this->ip;
-			rdc = redisConnect(this->ip.data(), this->port);
-			return rdc == NULL ? false : true;
-		}
-
+// 		if (this->isConnected()) {
+// 			return true;
+// 
+// 		}
+// 		else
+// 		{
+// 			const string ip_ = this->ip;
+// 	
+// 			
+// 			rdc = redisConnect(this->ip.data(), this->port);
+// 			return rdc == NULL ? false : true;
+// 		}
+		return false;
 
 	}//重新连接
 	bool disconnect() {
-		freeContext();
+// 		freeContext();
+// 		rdc = NULL;
+// 		return true;
+//----------
 		rdc = NULL;
 		return true;
 	}//断开
@@ -285,112 +300,115 @@ public:
 	}//重新设置
 
 	void freeContext() {
-		redisFree(this->rdc);
+	//redisFree(this->rdc);
+	//-----
 	}//清除context
 	bool isContainKey(char*  key) {
-		void* intP;
-		int arg_nums = 2;
-		const char* args[] = { "exists",key };
-		this->setCommndWithArgs(arg_nums, args, "keyExist", intP);
-		return (*(int*)intP == 0) ? false : true;
+// 		void* intP;
+// 		int arg_nums = 2;
+// 		const char* args[] = { "exists",key };
+// 		this->setCommndWithArgs(arg_nums, args, "keyExist", intP);
+// 		return (*(int*)intP == 0) ? false : true;
+		return true;
 
 
 	}//是否包含Key
 	bool deleteKey(char*  key) {
-		void* intP;
-		int arg_nums = 2;
-		const char* args[] = { "del",key };
-		this->setCommndWithArgs(arg_nums, args, "keyDelete", intP);
-		return (*(int*)intP == 0) ? false : true;
+// 		void* intP;
+// 		int arg_nums = 2;
+// 		const char* args[] = { "del",key };
+// 		this->setCommndWithArgs(arg_nums, args, "keyDelete", intP);
+// 		return (*(int*)intP == 0) ? false : true;
+		return true;
 
 	}//删除键
 	bool setCommndWithArgs(int agr_nums, const char** args, string des, void* &res) {
-		if (this->isConnected() == false) return false;
-		
-	
-		redisCommandArgv(this->rdc, agr_nums, args, NULL);
-		redisReply *reply;
-		redisGetReply(rdc, (void**)&reply);
-		switch (reply->type)
-		{
-		case REDIS_REPLY_ARRAY: {
-			//是数组，那么就需要读数组
-			vector<string>* vec = new vector<string>();
-
-			for (int i = 0; i<reply->elements; i++) {
-				vec->push_back((*(reply->element))[i].str);
-			}
-			res = (void*)vec;
-			return true;
-
-		}
-		case REDIS_REPLY_INTEGER: {
-			LONGLONG* a = new LONGLONG();
-			(*a) = reply->integer;
-			res = (void*)a;
-			return true;
-		}
-		case REDIS_REPLY_STRING: {
-			string* a = new string(reply->str);
-			res = (void*)a;
-			return true;
-
-		}
-		case REDIS_REPLY_NIL: {
-			cout << "error:get null from redis" << endl;
-			return false;
-		}
-		case REDIS_REPLY_ERROR: {
-			cout << "error:executed error" << endl;
-			return false;
-		}
-		case REDIS_REPLY_STATUS: {
-			//某个操作的，比如DEL SET 放东西的操作,删除和查键就不算在里面了
-			if (des == GET_LIST) {
-				//获取列表,不会触发
-
-			}
-			else if (des == PUT_LIST) {
-				//放列表的操作
-				return  reply->integer <= 0 ? false : true;
-
-			}
-			else if (des == ADD_VALUE_TO_SET) {
-				//创建或添加set
-				return  reply->integer <= 0 ? false : true;
-
-			}
-			else if (des == DELETE_VALUE_TO_SET) {
-				//删除某个set的成员
-				return  reply->integer <= 0 ? false : true;
-			}
-			else if (des == GET_STR) {
-				//获取字符串(序列化对象),不会到这里
-
-
-			}
-			else if (des == SET_STR) {
-				//设置字符串（序列化对象）
-				return strcmp(reply->str, "OK") == 0;
-			}
-			else {
-				//奇怪的操作
-				return false;
-			}
-
-
-			cout << reply->str << endl;
-			return true;
-		}
-		default:
-			cout << "unexcepted error" << endl;
-			return false;
-			break;
-		}
-
-
-	}//发送命令
-
-
+		// 		if (this->isConnected() == false) return false;
+		// 		std::unique_lock<std::mutex> lk(mut);
+		// 		redisCommandArgv(this->rdc, agr_nums, args, NULL);
+		// 		redisReply *reply;
+		// 		redisGetReply(rdc, (void**)&reply);
+		// 		switch (reply->type)
+		// 		{
+		// 		case REDIS_REPLY_ARRAY: {
+		// 			//是数组，那么就需要读数组
+		// 			vector<string>* vec = new vector<string>();
+		// 
+		// 			for (int i = 0; i<reply->elements; i++) {
+		// 				vec->push_back((*(reply->element))[i].str);
+		// 			}
+		// 			res = (void*)vec;
+		// 			return true;
+		// 
+		// 		}
+		// 		case REDIS_REPLY_INTEGER: {
+		// 			LONGLONG* a = new LONGLONG();
+		// 			(*a) = reply->integer;
+		// 			res = (void*)a;
+		// 			return true;
+		// 		}
+		// 		case REDIS_REPLY_STRING: {
+		// 			string* a = new string(reply->str);
+		// 			res = (void*)a;
+		// 			return true;
+		// 
+		// 		}
+		// 		case REDIS_REPLY_NIL: {
+		// 			cout << "error:get null from redis" << endl;
+		// 			return false;
+		// 		}
+		// 		case REDIS_REPLY_ERROR: {
+		// 			cout << "error:executed error" << endl;
+		// 			return false;
+		// 		}
+		// 		case REDIS_REPLY_STATUS: {
+		// 			//某个操作的，比如DEL SET 放东西的操作,删除和查键就不算在里面了
+		// 			if (des == GET_LIST) {
+		// 				//获取列表,不会触发
+		// 
+		// 			}
+		// 			else if (des == PUT_LIST) {
+		// 				//放列表的操作
+		// 				return  reply->integer <= 0 ? false : true;
+		// 
+		// 			}
+		// 			else if (des == ADD_VALUE_TO_SET) {
+		// 				//创建或添加set
+		// 				return  reply->integer <= 0 ? false : true;
+		// 
+		// 			}
+		// 			else if (des == DELETE_VALUE_TO_SET) {
+		// 				//删除某个set的成员
+		// 				return  reply->integer <= 0 ? false : true;
+		// 			}
+		// 			else if (des == GET_STR) {
+		// 				//获取字符串(序列化对象),不会到这里
+		// 
+		// 
+		// 			}
+		// 			else if (des == SET_STR) {
+		// 				//设置字符串（序列化对象）
+		// 				return strcmp(reply->str, "OK") == 0;
+		// 			}
+		// 			else {
+		// 				//奇怪的操作
+		// 				return false;
+		// 			}
+		// 
+		// 
+		// 			cout << reply->str << endl;
+		// 			return true;
+		// 		}
+		// 		default:
+		// 			cout << "unexcepted error" << endl;
+		// 			return false;
+		// 			break;
+		// 		}
+		// 
+		// 
+		// 	}//发送命令
+		//---------------
+		return true;
+	}
 };
 #endif

@@ -13,7 +13,7 @@
 // source: http://www.geom.uiuc.edu/~huberty/math5337/groupe/digits.html
 // TODO this should better be moved to NumTraits
 #define EIGEN_PI 3.141592653589793238462643383279502884197169399375105820974944592307816406L
-#include <stdio.h>
+
 
 namespace Eigen {
 
@@ -698,7 +698,7 @@ inline EIGEN_MATHFUNC_RETVAL(random, Scalar) random(const Scalar& x, const Scala
 template<typename Scalar>
 inline EIGEN_MATHFUNC_RETVAL(random, Scalar) random()
 {
-	return EIGEN_MATHFUNC_IMPL(random, Scalar)::run();
+  return EIGEN_MATHFUNC_IMPL(random, Scalar)::run();
 }
 
 // Implementatin of is* functions
@@ -1383,7 +1383,6 @@ template<> struct random_impl<bool>
   static inline bool run()
   {
     return random<int>(0,1)==0 ? false : true;
-
   }
 };
 

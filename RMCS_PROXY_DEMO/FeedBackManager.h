@@ -1,13 +1,16 @@
 #ifndef	FEEDBACKMANAGER_H
 #define FEEDBACKMANAGER_H
+
 #include "src/group_feedback.hpp"
 #include "src/feedback.hpp"
+
 #include "queue_safe.h"
 #include <vector>
 #include "JsonObjectBase.h"
 #include "common.h"
 using namespace std;
 using namespace hebi;
+
 class FeedBackManager{
 	//所有的feedback已经被管理起来了
 	//认为这个类的对象运行在线程中,即允许在生产者线程之中
