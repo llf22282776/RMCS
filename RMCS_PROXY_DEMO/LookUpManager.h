@@ -67,7 +67,7 @@ private:
 	void addHandlerFromGroups();//为fixed和缓存的group加处理函数
 	void addHandlerForOneGroup(vector<string>* &familyVec,vector<string>* &nameVec,string groupName);//添加一个group的
 	void getFamilyAndNamesFromGroupStruct(GroupStruct& thisGroup,vector<string>* &familysVec,vector<string>* &namesVec);
-
+	void showGroupFeedBackInfo(const GroupFeedback* group_fbk);//展示group的信息
 	//-----------------------
 public:
 	LookUpManager(

@@ -68,6 +68,7 @@ public:
 		{
 		case LED_CMD: {
 			for (int i = 0; i < g->size();i++) {
+				if (mapPtr->fd.size() <= i)break;
 				hebi::Color color_(mapPtr->fd.at(i).led_fied.led_R, mapPtr->fd.at(i).led_fied.led_G, mapPtr->fd.at(i).led_fied.led_B);
 				command[i].led().setOverrideColor(color_);
 			
@@ -77,7 +78,7 @@ public:
 		}
 		case POSITION_CMD: {
 			for (int i = 0; i < g->size(); i++) {
-				
+				if (mapPtr->fd.size() <= i)break;
 				command[i].actuator().position().set(mapPtr->fd.at(i).actuator.position);
 
 			}
@@ -86,7 +87,7 @@ public:
 		}
 		case TURQUE_CMD:{
 			for (int i = 0; i < g->size(); i++) {
-
+				if (mapPtr->fd.size() <= i)break;
 				command[i].actuator().torque().set(mapPtr->fd.at(i).actuator.torque);
 
 			}
@@ -95,7 +96,7 @@ public:
 		}
 		case VELOCITY_CMD: {
 			for (int i = 0; i < g->size(); i++) {
-
+				if (mapPtr->fd.size() <= i)break;
 				command[i].actuator().velocity().set(mapPtr->fd.at(i).actuator.velocity);
 
 			}

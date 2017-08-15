@@ -206,8 +206,10 @@ void LookUpManager::addHandlerForOneGroup(vector<string>* &familyVec,vector<stri
 		printf("LOOKUPMANAGER_THREAD: group from hebi is null!s\n");
 		return;//null不用加
 	}
-	grp->addFeedbackHandler([&fdbManager,&groupName](const GroupFeedback* group_fbk){
+	LookUpManager* this_ = this;
+	grp->addFeedbackHandler([&fdbManager,&groupName,&this_](const GroupFeedback* group_fbk){
 		//用fdbManager里面的函数
+		this_->showGroupFeedBackInfo(group_fbk);
 		GroupfeedbackCustomStruct gfb_custom= fdbManager->toGroupFbCustomStruct(group_fbk,groupName);
 		fdbManager->putToQueue(gfb_custom);
 	});
@@ -223,5 +225,16 @@ void LookUpManager::getFamilyAndNamesFromGroupStruct(GroupStruct& thisGroup,vect
 			namesVec->insert(namesVec->end(),it->name);
 		}
 	}
+
+}
+void LookUpManager::showGroupFeedBackInfo(const GroupFeedback* group_fbk) {
+	printf("LOOKUPMANAGER_THREAD:[-------GropFeedBack------]\n[------size:%d]\n",group_fbk->size());
+	for (int i = 0; i < group_fbk->size();i++) {
+		printf("LOOKUPMANAGER_THREAD:moudule[%d][motorCurrent:%f,motorWindingCurrent:%f,voltage:%f,motorSensorTemperature:%f]\n",i,(*group_fbk)[i].actuator().motorCurrent().get(), (*group_fbk)[i].actuator().motorWindingCurrent().get(), (*group_fbk)[i].voltage().get(), (*group_fbk)[i].actuator().motorSensorTemperature().get());
+	
+	}
+	printf("LOOKUPMANAGER_THREAD:[-------END------]\n", group_fbk->size());
+
+
 
 }
