@@ -21,7 +21,7 @@ class CommandCustomer:public CThread
 	//feedback会被feedbackcustomer处理
 
 public:
-	CommandCustomer(queue_safe<CommandStruct>& command_struct_queue_,ConfigManager& cfg,Lookup& lm,int sleepTime_=DEFAULT_SLEEP_TIME):command_struct_queue(command_struct_queue_),cfgManager(cfg), lookup(lm),sleeptime(sleepTime_){
+	CommandCustomer(queue_safe<CommandGroupStruct>& command_struct_queue_,ConfigManager& cfg,Lookup& lm,int sleepTime_=DEFAULT_SLEEP_TIME):command_struct_queue(command_struct_queue_),cfgManager(cfg), lookup(lm),sleeptime(sleepTime_){
 
 
 	}
@@ -31,6 +31,7 @@ public:
 	
 	
 	}
+	CommandGroupStruct getFakeLedCommand(vector<string> fs_, vector<string> ns_, string groupName, int size);
 	void run() override; //重写run
 	void init(){
 		this->start();
@@ -52,7 +53,8 @@ public:
 	bool customCommand(){
 		
 		printf("COMMAND_CUSTOMER : send led command\n");
-		shared_ptr<CommandStruct> mapPtr  = this->command_struct_queue.wait_and_pop();
+		//shared_ptr<CommandGroupStruct> mapPtr  = this->command_struct_queue.wait_and_pop();
+		CommandGroupStruct* mapPtr = &(getFakeLedCommand({"f1"}, {"leg","arm"},"testGroup",2));
 		if(!mapPtr)return false;//没有取到需要消耗的gfd
 		unique_ptr<hebi::Group> g= this->lookup.getGroupFromNames(mapPtr->names,mapPtr->familys);
 		printf("COMMAND_CUSTOMER : g is not null:%d\n",g!=NULL);
@@ -60,19 +62,56 @@ public:
 			printf("COMMAND_CUSTOMER : g is  null\n");
 			return false;
 		}
+		//创建这个group的command
 		hebi::GroupCommand command(g->size());
-		uint8_t r=254;
-		uint8_t g1=0;
-		uint8_t b=0;
-		for(int i=0;i<g->size();i++){
-			hebi::Color c(r,g1,b);
-			command[i].led().setOverrideColor(c);
+		switch (mapPtr->cmd)
+		{
+		case LED_CMD: {
+			for (int i = 0; i < g->size();i++) {
+				hebi::Color color_(mapPtr->fd.at(i).led_fied.led_R, mapPtr->fd.at(i).led_fied.led_G, mapPtr->fd.at(i).led_fied.led_B);
+				command[i].led().setOverrideColor(color_);
+			
+			}
+			break;
+		
 		}
+		case POSITION_CMD: {
+			for (int i = 0; i < g->size(); i++) {
+				
+				command[i].actuator().position().set(mapPtr->fd.at(i).actuator.position);
+
+			}
+			break;
+		
+		}
+		case TURQUE_CMD:{
+			for (int i = 0; i < g->size(); i++) {
+
+				command[i].actuator().torque().set(mapPtr->fd.at(i).actuator.torque);
+
+			}
+			break;
+		
+		}
+		case VELOCITY_CMD: {
+			for (int i = 0; i < g->size(); i++) {
+
+				command[i].actuator().velocity().set(mapPtr->fd.at(i).actuator.velocity);
+
+			}
+			break;
+
+		}
+		default:
+			//do nothing
+			break;
+		}
+
 		int timeout=100;
 		if (g->sendCommandWithAcknowledgement(command, timeout))
 		{
 			
-			printf("COMMAND_CUSTOMER : already sent!");
+			printf("COMMAND_CUSTOMER : already sent!\n");
 		}
 		else
 		{
@@ -82,7 +121,7 @@ public:
 		return true;
 	}
 private:
-	queue_safe<CommandStruct>& command_struct_queue;
+	queue_safe<CommandGroupStruct>& command_struct_queue;
 	ConfigManager& cfgManager;
 	Lookup& lookup;
 	int sleeptime;
@@ -99,7 +138,21 @@ void CommandCustomer::run(){
 		printf("COMMAND_CUSTOMER : command customer is ready for next!!!!!\n");
 	}
 
-};
+}
+CommandGroupStruct CommandCustomer::getFakeLedCommand(vector<string> fs_,vector<string> ns_,string groupName,int size) {
+	Led_field l(254, 0, 0);
+	Actuator_field a(0,0,0,0);
+	vector<CommandStruct> v;
+	for (int i = 0; i < size;i++) {
+		CommandStruct c(a, l);
+		v.push_back(c);
+	}
+	CommandGroupStruct cg(v,fs_,ns_);
+	cg.groupName = groupName;
+	cg.cmd = LED_CMD;
+	return cg;
+	
 
+}
 
 #endif // !

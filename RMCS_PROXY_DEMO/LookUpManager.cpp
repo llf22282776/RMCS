@@ -87,6 +87,7 @@ map<string,vector<string>> LookUpManager::getNewestMapFromHibi(){
 		auto entry = entrylist->getEntry(i);
 		if(fMap.count(entry.family_)){
 			//包含，就放进去
+		
 			(fMap[entry.family_]).push_back(entry.name_);
 
 		}else {

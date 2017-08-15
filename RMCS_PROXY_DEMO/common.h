@@ -9,6 +9,10 @@
 #define SET_STR "set_str"
 #define DEFAULT_SLEEP_TIME 100
 #define DEFAULT_FD_FREQUENCY 10
+#define LED_CMD 0
+#define POSITION_CMD 1
+#define TURQUE_CMD 2
+#define VELOCITY_CMD 3
 //#include "hiredis/hiredis.h"
 #include <iostream>
 
@@ -191,34 +195,40 @@ public:
 
 
 };
-class CommandStruct   {
+class CommandStruct {
 public:
-	string cmd;
+	Actuator_field actuator;
+	Led_field led_fied;
+	CommandStruct(Actuator_field a, Led_field l) :actuator(a), led_fied(l) {
+
+	}
+	~CommandStruct() {
+
+
+	}
+	// 	virtual void SetPropertys() {
+	// 
+	// 	}
+};
+class CommandGroupStruct   {
+public:
+
 	string groupName;
 	vector<string> familys;
 	vector<string> names;
-	vector<float> vel;
-	vector<float> t;
-	vector<float> p;
-	vector<float> vol;
-	FeedbackCustomStruct fd;
-	CommandStruct(FeedbackCustomStruct fd_) :fd(fd_) {
+	vector<CommandStruct> fd;
+	int cmd;
+	CommandGroupStruct(vector<CommandStruct> fd_,vector<string> fs_,vector<string> names_) :fd(fd_),familys(fs_),names(names_) {
 
 	}
 // 	virtual void SetPropertys() {
-// 		this->SetProperty("cmd", asString, &cmd);
-// 		this->SetProperty("groupName", asString, &groupName);
-// 		this->SetProperty("familys", asVectorArray, &familys);
-// 		this->SetProperty("names", asVectorArray, &names);
-// 		this->SetProperty("vel", asVectorArray, &vel);
-// 		this->SetProperty("t", asVectorArray, &t);
-// 		this->SetProperty("p", asVectorArray, &p);
-// 		this->SetProperty("vol", asVectorArray, &vol);
-// 		this->SetProperty("fd", asJsonObj, &fd);
 // 
 // 	}
 
 };
+
+
+
 class RedisCofig {
 public:
 	string ip;
