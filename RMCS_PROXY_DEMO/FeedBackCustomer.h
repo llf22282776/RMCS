@@ -21,7 +21,7 @@ private:
 	DataBaseManager& dbManager;
 	int sleeptime;
 public:
-	FeedBackCustomer(queue_safe<GroupfeedbackCustomStruct>& q,CacheManager& cacheManager_,DataBaseManager dbManager_,int sleeptime_=LookUpManager::DEAULT_SLEEP_TIME):
+	FeedBackCustomer(queue_safe<GroupfeedbackCustomStruct>& q,CacheManager& cacheManager_,DataBaseManager dbManager_,int sleeptime_=DEFAULT_SLEEP_TIME):
 	cacheManager(cacheManager_),
 	dbManager(dbManager_),
 	sleeptime(sleeptime_),
@@ -37,14 +37,19 @@ public:
 	  bool insertDb(int type,GroupfeedbackCustomStruct& gfd);//放进数据库里面
 	  bool customGfd();//消费
 	  void printGroupFeedBack(GroupfeedbackCustomStruct& gfd){
-		  cout<<"-------------"<<endl;
-		  cout<<"feedback from:"+gfd.groupName<<endl;
-		  cout<<"size:"<<gfd.velocitysVec.size()<<endl;
-		  cout<<"+++"<<endl;
+		
+		  printf("-------------\n");
+		
+		  printf("feedback from:\n");
+		
+		  printf("size:\n");
+		;
+		  printf("+++\n");
 		  for(int i=0;i<gfd.moduleFeedBackVec.size();i++){
-			  cout<<"module["<<i<<"]'s:（"<<gfd.moduleFeedBackVec.at(i).led_field.led_R<<","<<gfd.moduleFeedBackVec.at(i).led_field.led_G<<","<<gfd.moduleFeedBackVec.at(i).led_field.led_B<<")"<<endl;
+				printf("module[%d]'s:（%d,%d,%d)\n",i ,gfd.moduleFeedBackVec.at(i).led_field.led_R, gfd.moduleFeedBackVec.at(i).led_field.led_G, gfd.moduleFeedBackVec.at(i).led_field.led_B);
 		  }
-		  cout<<"+++"<<endl;
+		  printf("+++\n");
+		
 	  }
 };
 

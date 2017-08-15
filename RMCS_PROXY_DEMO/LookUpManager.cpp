@@ -9,7 +9,8 @@ LookUpManager::LookUpManager(CacheManager& cacheManager_,
 							 queue_safe<GroupfeedbackCustomStruct>& groupFeedbackQueue_,
 							 Lookup& lookup_,
 							 ConfigManager& configManager_,
-							 int sleep_time_
+							 int sleep_time_,
+							 int default_frequency_
 )
 	:cacheManager(cacheManager_)
 	,groupFeedbackQueue(groupFeedbackQueue_)
@@ -20,6 +21,7 @@ LookUpManager::LookUpManager(CacheManager& cacheManager_,
 	,cacheGroupMap()
 	,feedbackManagerVec()
 	,fixedAdded(false)
+	,default_frequency(default_frequency_)
 {
 	//初始化
 	//获取值
@@ -54,6 +56,7 @@ void LookUpManager::run() {
 		if(this->sleep_time>0){
 			this_thread::sleep_for(std::chrono::milliseconds(this->sleep_time));
 		}
+		printf("LOOKUPMANAGER_THREAD: lookupManager thread next executed\n");
 	}
 
 
@@ -76,6 +79,10 @@ map<string,vector<string>> LookUpManager::getNewestMapFromHibi(){
 	//从hebi里面获取
 	map<string,vector<string>> fMap;
 	unique_ptr<hebi::Lookup::EntryList> entrylist = this->lookup.getEntryList();
+	if (!entrylist) {
+		printf("LOOKUPMANAGER_THREAD: entrylist is null !!\n");
+		return fMap;
+	}
 	for(int i=0; i<entrylist->size();i++){
 		auto entry = entrylist->getEntry(i);
 		if(fMap.count(entry.family_)){
@@ -104,14 +111,16 @@ void LookUpManager::updateGroupConncetState(vector<GroupStruct> groupInCache,int
 	//根据这些group，去判断是否连接了
 	if( groupInCache.size()>0 && this->updateGroupsStateInCache(getGroupsStateFromHeibi(groupInCache,default_timeout))){
 		//成功刷新缓存
-		cout<<"group connection status flush successfully"<<endl;
+		
+		printf("LOOKUPMANAGER_THREAD: group connection status flush successfully\n");
 
 	}else {
 		if(cacheManager.isConnected()){
 			//连接上了，就抱个错
 		}else{
 			//没有连接上，既然是刷新状态，没必要干什么了
-			cout<<"disconnected,can not flush "<<endl;
+	
+			printf("LOOKUPMANAGER_THREAD: disconnected,can not flush\n");
 		}
 	}
 
@@ -192,11 +201,16 @@ void LookUpManager::addHandlerFromGroups(){
 void LookUpManager::addHandlerForOneGroup(vector<string>* &familyVec,vector<string>* &nameVec,string groupName){
 	FeedBackManager* fdbManager=new FeedBackManager(this->groupFeedbackQueue); 
 	unique_ptr<Group> grp= this->lookup.getGroupFromNames(*familyVec,*nameVec,DEAULT_SLEEP_TIME);
+	if (!grp){
+		printf("LOOKUPMANAGER_THREAD: group from hebi is null!s\n");
+		return;//null不用加
+	}
 	grp->addFeedbackHandler([&fdbManager,&groupName](const GroupFeedback* group_fbk){
 		//用fdbManager里面的函数
 		GroupfeedbackCustomStruct gfb_custom= fdbManager->toGroupFbCustomStruct(group_fbk,groupName);
 		fdbManager->putToQueue(gfb_custom);
 	});
+	grp->setFeedbackFrequencyHz(this->default_frequency);
 	this->feedbackManagerVec.push_back(*fdbManager); //放进vec里面管理
 }
 void LookUpManager::getFamilyAndNamesFromGroupStruct(GroupStruct& thisGroup,vector<string>* &familysVec,vector<string>* &namesVec){

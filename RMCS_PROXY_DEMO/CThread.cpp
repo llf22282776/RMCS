@@ -16,8 +16,8 @@ CThread::~CThread(){
 }  
 void CThread::start(){
 	if(!this-> t ){
-		std::thread t =  std::thread(&CThread::run,this);
-		t.detach() ; //detach the thread, run continue
+		this->t = new std::thread(&CThread::run,this);
+		//this->t->detach() ; //detach the thread, run continue
 	}
 }  //start thread
 
@@ -48,7 +48,14 @@ void CThread::timeSleeps(){
 } //set sleep time
 void CThread::join(){
 	if(t){
-		t->join();
+		if (t->joinable()) {
+			t->join();
+			printf("thread  joins \n");
+		}
+		else {
+			printf("thread cannot join\n");
+		
+		}
 	}
 }      //
 bool CThread::swap(CThread* t1 ){

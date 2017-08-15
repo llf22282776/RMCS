@@ -1,12 +1,12 @@
 #ifndef	FEEDBACKMANAGER_H
 #define FEEDBACKMANAGER_H
+#include <feedback.hpp>
+#include <group_feedback.hpp>
 
-#include "src/group_feedback.hpp"
-#include "src/feedback.hpp"
 
 #include "queue_safe.h"
 #include <vector>
-#include "JsonObjectBase.h"
+//#include "JsonObjectBase.h"
 #include "common.h"
 using namespace std;
 using namespace hebi;

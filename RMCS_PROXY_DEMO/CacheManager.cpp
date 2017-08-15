@@ -1,5 +1,4 @@
 #include "CacheManager.h"
-#include "include/json/json.h"
 #include <mutex>
 #include <condition_variable>
 
@@ -13,7 +12,8 @@ CacheManager::CacheManager(string ip_,int port_,
 CacheManager::~CacheManager(){}
 void CacheManager::initCacheManager(){
 	this->isConnect=this->cacheConnect.init();
-	cout<<"redis connect status:"<<this->isConnected()<<endl;
+
+	printf("CACHE_MANAGER_THREAD : redis connect status:%d\n",this->isConnect);
 	this->start();//跑线程
 
 
@@ -21,14 +21,16 @@ void CacheManager::initCacheManager(){
 
 vector<GroupStruct> CacheManager::getGroupInCache(){
 	//别的线程里面
-	cout << "get user groups from cache" << endl;
+	//cout << "get user groups from cache" << endl;
+	printf("LOOKUPMANAGER_THREAD : get user groups from cache\n");
 	return this->getGroupInCache_pri(GET_LIST);
 
 }//获取cache中的list,需要锁
 
 bool CacheManager::updateCacheFamilyAndItsNames(map<string,vector<string>> familyMap){
 	//已经在队列函数中处理了锁
-	cout<<"put family and its names into queue"<<endl;
+
+	printf("LOOKUP_MANAGER_THREAD : put family and its names into queue\n");
 	if(this->isConnect == false)return false;
 	else {
 		this->family_name_queue.push(familyMap);
@@ -41,7 +43,8 @@ bool CacheManager::updateCacheFamilyAndItsNames(map<string,vector<string>> famil
 //这个函数通常在别的线程掉
 
 bool CacheManager::updateCacheGroupStateList(vector<GroupStruct> groupStructVec){
-	cout<<"put groups connect status into queue"<<endl;
+	//cout<<"put groups connect status into queue"<<endl;
+	printf("LOOKUPMANAGER_THREAD : put groups connect status into queue\n");
 	if(this->isConnect == false)return false;
 	else {
 		this->group_struct_queue.push(groupStructVec);
@@ -55,12 +58,13 @@ bool CacheManager::isConnected(){return this->isConnect;}//是否正在连接上的
 void CacheManager::customfamilyMap(){
 	shared_ptr<map<string,vector<string>>> mapPtr  = this->family_name_queue.try_pop();
 	if(!mapPtr)return ;//没有取到
-	cout << "get family and names from queue" << endl;
+
+	printf("CACHE_MANAGER_THREAD : get family and names from queue\n");
 	map<string,vector<string>>::iterator it;
 	for(it=mapPtr->begin();it!=mapPtr->end();it++){
 			//放进family的集合里面去
 			//缓存里面有family的set 和group 的 set 
-			this->pushNewFamily_list_ToCache_mtx(it->first,it->second);
+			this->flushCacheAndItNameList(it->first,it->second);
 	}
 
 }//消耗队列里面的familyMap，锁
@@ -68,7 +72,9 @@ void CacheManager::customGroupStateMap(){
 	//
 	shared_ptr<vector<GroupStruct>> mapPtr  = this->group_struct_queue.try_pop();
 	if(!mapPtr)return ;//没有取到需要消耗的groupVec
-	cout << "get group status from queue" << endl;
+
+
+	printf("CACHE_MANAGER_THREAD : get group status from queue\n");
 	vector<GroupStruct>::iterator it;
 	for(it=mapPtr->begin();it!=mapPtr->end();it++){
 
@@ -88,13 +94,15 @@ void CacheManager::setIpAndPort(string ip_,string port_){
 void CacheManager::run(){
 	while (true)
 	{
-		cout<<"lookupManager thread work"<<endl;
+		//cout<<"lookupManager thread work"<<endl;
+		printf("CACHE_MANAGER_THREAD : cache manager thread work\n");
 		customfamilyMap();//消耗下队列
 		customGroupStateMap();
 		customGroupFeedBack();
 		if(this->sleep_time>0){
 			this_thread::sleep_for(std::chrono::milliseconds(this->sleep_time));
 		}
+		printf("CACHE_MANAGER_THREAD : cache manager is ready for next\n");
 	}
 }//重置运行函数
 
@@ -139,13 +147,14 @@ vector<GroupStruct> CacheManager::getGroupInCache_pri(string des){
 // 	}
 // 		delete groupP;
 // 		return groupV; //返回
-	cout << "get group list from cache" << endl;
+	printf("LOOKUP_MANAGER_THREAD: get group list from cache\n");
+	
 	vector<GroupStruct> v;
 	return v;
 
 }//取数据
 //调用缓存类，放进去
-bool CacheManager::pushNewFamily_list_ToCache_mtx(const string& key ,vector<string>& list){
+bool CacheManager::flushCacheAndItNameList(const string& key ,vector<string>& list){
 	//两个set都要add 
 // 	void* groupP;
 // 	int arg_nums=list.size()+2;
@@ -176,7 +185,8 @@ bool CacheManager::pushNewFamily_list_ToCache_mtx(const string& key ,vector<stri
 // 	delete args;
 // 
 // 	return opt==opt1==true;
-	cout << "send newest family and names map to cache" << endl;
+
+	printf("CACHE_MANAGER_THREAD : send newest family and names map to cache\n");
 	return true;
 }
 bool CacheManager::flushCacheGroupState(GroupStruct gst){
@@ -193,7 +203,8 @@ bool CacheManager::flushCacheGroupState(GroupStruct gst){
 // 	delete objStr;
 // 	delete[] args_;
 // 	return opt;
-	cout << "sent group status to cache" << endl;
+
+	printf("CACHE_MANAGER_THREAD : sent group status to cache\n");
 	return true;
 
 }
@@ -212,13 +223,15 @@ bool CacheManager::flushCacheGroupFeedBackList(GroupfeedbackCustomStruct gfd){
 // 	delete objStr;
 // 	delete[] args_;
 // 	return opt;
-	cout << "sent group feed back  to cache" << endl;
+	printf("CACHE_MANAGER_THREAD : sent group feed back  to cache\n");
+
 	return true;
 
 
 }//刷新远端缓存里面的groupFeedback
 bool CacheManager::updateGroupFeedBack(GroupfeedbackCustomStruct gfd){
-	cout<<"put group feed back into queue"<<endl;
+	printf("FEEDBACK_CUSTOMER : put group feed back into queue\n");
+	//cout<<"put group feed back into queue"<<endl;
 	if(this->isConnect == false)return false;
 	else {
 		this->group_feedback_queue.push(gfd);
@@ -231,7 +244,8 @@ void CacheManager::customGroupFeedBack(){
 	shared_ptr<GroupfeedbackCustomStruct> mapPtr  = this->group_feedback_queue.try_pop();
 	
 	if(!mapPtr)return ;//没有取到需要消耗的groupVec
-	cout << "get one feedback from queue" << endl;
+	printf("CACHE_MANAGER_THREAD : get one feedback from queue\n");
+
 	this->flushCacheGroupFeedBackList(*mapPtr);
 
 }

@@ -28,10 +28,23 @@
     <ClInclude Include="FeedBackCustomer.h" />
     <ClInclude Include="FeedBackManager.h" />
     <ClInclude Include="InitManager.h" />
-    <ClInclude Include="JsonObjectBase.h" />
     <ClInclude Include="LookUpManager.h" />
     <ClInclude Include="queue_safe.h" />
     <ClInclude Include="ServerApiManager.h" />
+    <ClInclude Include="src\color.hpp" />
+    <ClInclude Include="src\command.hpp" />
+    <ClInclude Include="src\feedback.hpp" />
+    <ClInclude Include="src\group.hpp" />
+    <ClInclude Include="src\group_command.hpp" />
+    <ClInclude Include="src\group_feedback.hpp" />
+    <ClInclude Include="src\group_info.hpp" />
+    <ClInclude Include="src\info.hpp" />
+    <ClInclude Include="src\kinematics.hpp" />
+    <ClInclude Include="src\lookup.hpp" />
+    <ClInclude Include="src\mac_address.hpp" />
+    <ClInclude Include="src\trajectory.hpp" />
+    <ClInclude Include="src\util.hpp" />
+    <ClInclude Include="src\vector_3_f.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CacheManager.cpp" />
@@ -42,6 +55,17 @@
     <ClCompile Include="FeedBackManager.cpp" />
     <ClCompile Include="InitManager.cpp" />
     <ClCompile Include="LookUpManager.cpp" />
+    <ClCompile Include="src\command.cpp" />
+    <ClCompile Include="src\feedback.cpp" />
+    <ClCompile Include="src\group.cpp" />
+    <ClCompile Include="src\group_command.cpp" />
+    <ClCompile Include="src\group_feedback.cpp" />
+    <ClCompile Include="src\group_info.cpp" />
+    <ClCompile Include="src\info.cpp" />
+    <ClCompile Include="src\kinematics.cpp" />
+    <ClCompile Include="src\lookup.cpp" />
+    <ClCompile Include="src\mac_address.cpp" />
+    <ClCompile Include="src\trajectory.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A406C413-D7CC-4251-A1D9-40B6FF857EA4}</ProjectGuid>

@@ -1,13 +1,14 @@
 #ifndef  COMMON_H
 #define  COMMON_H
-#include "JsonObjectBase.h"
+//#include "JsonObjectBase.h"
 #define PUT_LIST "put_list"
 #define GET_LIST "get_list"
 #define GET_STR  "get_str"
 #define ADD_VALUE_TO_SET  "add_value_to_set"
 #define DELETE_VALUE_TO_SET "delete_value_to_set"
 #define SET_STR "set_str"
-
+#define DEFAULT_SLEEP_TIME 100
+#define DEFAULT_FD_FREQUENCY 10
 //#include "hiredis/hiredis.h"
 #include <iostream>
 
@@ -18,7 +19,7 @@
 
 //#include "src/Win32_Interop/win32fixes.h"
 #include <vector>
-
+#include <map>
 
 using namespace std;
 class NameStruct   {
@@ -126,6 +127,9 @@ public:
 // 	}
 
 };
+
+
+
 //group里面module的重置格式
 //反正只要我们需要的就好
 class FeedbackCustomStruct   {

@@ -3,12 +3,13 @@
 #include "CThread.h"
 #include <string>
 #include "queue_safe.h"
-#include "JsonObjectBase.h"
+//#include "JsonObjectBase.h"
 #include "common.h"
 
 
 #include "ConfigManager.h"
 #include "LookUpManager.h"
+#include "lookup.hpp"
 using namespace  std;
 class CommandCustomer:public CThread
 {
@@ -20,7 +21,7 @@ class CommandCustomer:public CThread
 	//feedback会被feedbackcustomer处理
 
 public:
-	CommandCustomer(queue_safe<CommandStruct>& command_struct_queue_,ConfigManager& cfg,LookUpManager& lm,int sleepTime_=LookUpManager::DEAULT_SLEEP_TIME):command_struct_queue(command_struct_queue_),cfgManager(cfg),lookupManager(lm),sleeptime(sleepTime_){
+	CommandCustomer(queue_safe<CommandStruct>& command_struct_queue_,ConfigManager& cfg,Lookup& lm,int sleepTime_=DEFAULT_SLEEP_TIME):command_struct_queue(command_struct_queue_),cfgManager(cfg), lookup(lm),sleeptime(sleepTime_){
 
 
 	}
@@ -49,10 +50,16 @@ public:
 
 	}
 	bool customCommand(){
-		cout<<"send led command"<<endl;
-		shared_ptr<CommandStruct> mapPtr  = this->command_struct_queue.try_pop();
-		//if(!mapPtr)return false;//没有取到需要消耗的gfd
-		unique_ptr<hebi::Group> g= this->lookupManager.getLookUp().getGroupFromNames(mapPtr->names,mapPtr->familys);
+		
+		printf("COMMAND_CUSTOMER : send led command\n");
+		shared_ptr<CommandStruct> mapPtr  = this->command_struct_queue.wait_and_pop();
+		if(!mapPtr)return false;//没有取到需要消耗的gfd
+		unique_ptr<hebi::Group> g= this->lookup.getGroupFromNames(mapPtr->names,mapPtr->familys);
+		printf("COMMAND_CUSTOMER : g is not null:%d\n",g!=NULL);
+		if (!g){
+			printf("COMMAND_CUSTOMER : g is  null\n");
+			return false;
+		}
 		hebi::GroupCommand command(g->size());
 		uint8_t r=254;
 		uint8_t g1=0;
@@ -64,30 +71,32 @@ public:
 		int timeout=100;
 		if (g->sendCommandWithAcknowledgement(command, timeout))
 		{
-			std::cout << "already sent!" << std::endl;
+			
+			printf("COMMAND_CUSTOMER : already sent!");
 		}
 		else
 		{
-			std::cout << "send time out" << std::endl;
+		
+			printf("COMMAND_CUSTOMER : send time out\n");
 		}
 		return true;
 	}
 private:
 	queue_safe<CommandStruct>& command_struct_queue;
 	ConfigManager& cfgManager;
-	LookUpManager& lookupManager;
+	Lookup& lookup;
 	int sleeptime;
 };
 
 void CommandCustomer::run(){
 	while (true)
 	{
-
+		printf("COMMAND_CUSTOMER : command customer working!!!!!\n");
 		this->customCommand();
 		if(this->sleeptime>0){
 			this_thread::sleep_for(std::chrono::milliseconds(this->sleeptime));
 		}
-
+		printf("COMMAND_CUSTOMER : command customer is ready for next!!!!!\n");
 	}
 
 };

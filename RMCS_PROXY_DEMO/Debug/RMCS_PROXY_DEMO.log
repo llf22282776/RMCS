@@ -1,109 +1,31 @@
-﻿  FeedBackManager.cpp
+﻿  trajectory.cpp
 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): warning C4996: 'Json::Writer': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(143): note: 参见“Json::Writer”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145): note: 参见“Json::Writer::~Writer”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(177): warning C4996: 'Json::Writer::write': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(147): note: 参见“Json::Writer::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163): warning C4996: 'Json::FastWriter::document_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(182): note: 参见“Json::FastWriter::document_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(212): warning C4996: 'Json::Writer': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(143): note: 参见“Json::Writer”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145): note: 参见“Json::Writer::~Writer”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(222): warning C4996: 'Json::Writer::write': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(147): note: 参见“Json::Writer::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::childValues_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(240): note: 参见“Json::StyledWriter::childValues_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::document_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(241): note: 参见“Json::StyledWriter::document_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::indentString_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(242): note: 参见“Json::StyledWriter::indentString_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::childValues_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(306): note: 参见“Json::StyledStreamWriter::childValues_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::indentString_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(308): note: 参见“Json::StyledStreamWriter::indentString_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::indentation_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(310): note: 参见“Json::StyledStreamWriter::indentation_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(54): warning C4996: 'Json::FastWriter': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): note: 参见“Json::FastWriter”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(55): warning C4996: 'Json::FastWriter::write': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(177): note: 参见“Json::FastWriter::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(61): warning C4996: 'Json::Reader': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(35): note: 参见“Json::Reader”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(63): warning C4996: 'Json::Reader::parse': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(77): note: 参见“Json::Reader::parse”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(386): warning C4996: 'Json::FastWriter': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): note: 参见“Json::FastWriter”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(387): warning C4996: 'Json::FastWriter::write': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(177): note: 参见“Json::FastWriter::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::nodes_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(237): note: 参见“Json::Reader::nodes_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::errors_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(238): note: 参见“Json::Reader::errors_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::document_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(239): note: 参见“Json::Reader::document_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::commentsBefore_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(245): note: 参见“Json::Reader::commentsBefore_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
-  正在生成代码...
-  正在编译...
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\trajectory.cpp(113): warning C4018: “<”: 有符号/无符号不匹配
+  mac_address.cpp
+  lookup.cpp
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  kinematics.cpp
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\hebi_kinematic_parameters.h(62): warning C4838: 从“double”转换到“float”需要收缩转换
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\hebi_kinematic_parameters.h(62): warning C4305: “初始化”: 从“double”到“float”截断
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\hebi_kinematic_parameters.h(81): warning C4838: 从“double”转换到“float”需要收缩转换
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\hebi_kinematic_parameters.h(81): warning C4305: “初始化”: 从“double”到“float”截断
+  info.cpp
+  group_info.cpp
+  group_feedback.cpp
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  group_command.cpp
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\group_command.cpp(43): warning C4244: “参数”: 从“const double”转换到“float”，可能丢失数据
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\group_command.cpp(50): warning C4244: “参数”: 从“const double”转换到“float”，可能丢失数据
+  group.cpp
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  feedback.cpp
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\feedback.cpp(109): warning C4244: “return”: 从“int64_t”转换到“int”，可能丢失数据
+  command.cpp
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\command.cpp(214): warning C4244: “return”: 从“int64_t”转换到“int”，可能丢失数据
   LookUpManager.cpp
 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): warning C4996: 'Json::Writer': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(143): note: 参见“Json::Writer”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145): note: 参见“Json::Writer::~Writer”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(177): warning C4996: 'Json::Writer::write': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(147): note: 参见“Json::Writer::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163): warning C4996: 'Json::FastWriter::document_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(182): note: 参见“Json::FastWriter::document_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(212): warning C4996: 'Json::Writer': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(143): note: 参见“Json::Writer”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145): note: 参见“Json::Writer::~Writer”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(222): warning C4996: 'Json::Writer::write': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(147): note: 参见“Json::Writer::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::childValues_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(240): note: 参见“Json::StyledWriter::childValues_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::document_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(241): note: 参见“Json::StyledWriter::document_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::indentString_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(242): note: 参见“Json::StyledWriter::indentString_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::childValues_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(306): note: 参见“Json::StyledStreamWriter::childValues_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::indentString_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(308): note: 参见“Json::StyledStreamWriter::indentString_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::indentation_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(310): note: 参见“Json::StyledStreamWriter::indentation_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(54): warning C4996: 'Json::FastWriter': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): note: 参见“Json::FastWriter”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(55): warning C4996: 'Json::FastWriter::write': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(177): note: 参见“Json::FastWriter::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(61): warning C4996: 'Json::Reader': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(35): note: 参见“Json::Reader”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(63): warning C4996: 'Json::Reader::parse': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(77): note: 参见“Json::Reader::parse”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(386): warning C4996: 'Json::FastWriter': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): note: 参见“Json::FastWriter”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(387): warning C4996: 'Json::FastWriter::write': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(177): note: 参见“Json::FastWriter::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::nodes_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(237): note: 参见“Json::Reader::nodes_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::errors_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(238): note: 参见“Json::Reader::errors_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::document_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(239): note: 参见“Json::Reader::document_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::commentsBefore_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(245): note: 参见“Json::Reader::commentsBefore_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\lookupmanager.cpp(126): warning C4018: “<”: 有符号/无符号不匹配
 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\lookupmanager.cpp(127): warning C4018: “<”: 有符号/无符号不匹配
 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\lookupmanager.cpp(161): warning C4018: “<”: 有符号/无符号不匹配
@@ -111,58 +33,8 @@ e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\lookupmanager.cpp(172): warning
 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\lookupmanager.cpp(203): warning C4018: “<”: 有符号/无符号不匹配
   InitManager.cpp
 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): warning C4996: 'Json::Writer': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(143): note: 参见“Json::Writer”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145): note: 参见“Json::Writer::~Writer”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(177): warning C4996: 'Json::Writer::write': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(147): note: 参见“Json::Writer::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(163): warning C4996: 'Json::FastWriter::document_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(182): note: 参见“Json::FastWriter::document_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(212): warning C4996: 'Json::Writer': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(143): note: 参见“Json::Writer”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::Writer::~Writer': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(145): note: 参见“Json::Writer::~Writer”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(222): warning C4996: 'Json::Writer::write': Use StreamWriter instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(147): note: 参见“Json::Writer::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::childValues_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(240): note: 参见“Json::StyledWriter::childValues_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::document_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(241): note: 参见“Json::StyledWriter::document_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(215): warning C4996: 'Json::StyledWriter::indentString_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(242): note: 参见“Json::StyledWriter::indentString_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::childValues_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(306): note: 参见“Json::StyledStreamWriter::childValues_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::indentString_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(308): note: 参见“Json::StyledStreamWriter::indentString_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::indentation_': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(310): note: 参见“Json::StyledStreamWriter::indentation_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(54): warning C4996: 'Json::FastWriter': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): note: 参见“Json::FastWriter”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(55): warning C4996: 'Json::FastWriter::write': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(177): note: 参见“Json::FastWriter::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(61): warning C4996: 'Json::Reader': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(35): note: 参见“Json::Reader”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(63): warning C4996: 'Json::Reader::parse': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(77): note: 参见“Json::Reader::parse”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(386): warning C4996: 'Json::FastWriter': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): note: 参见“Json::FastWriter”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(387): warning C4996: 'Json::FastWriter::write': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(177): note: 参见“Json::FastWriter::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::nodes_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(237): note: 参见“Json::Reader::nodes_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::errors_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(238): note: 参见“Json::Reader::errors_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::document_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(239): note: 参见“Json::Reader::document_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::commentsBefore_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(245): note: 参见“Json::Reader::commentsBefore_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\feedbackcustomer.h(44): warning C4018: “<”: 有符号/无符号不匹配
-  FeedBackCustomer.cpp
+  FeedBackManager.cpp
 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): warning C4996: 'Json::Writer': Use StreamWriter instead
   e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(143): note: 参见“Json::Writer”的声明
@@ -190,59 +62,16 @@ e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): war
   e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(308): note: 参见“Json::StyledStreamWriter::indentString_”的声明
 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(279): warning C4996: 'Json::StyledStreamWriter::indentation_': Use StreamWriterBuilder instead
   e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(310): note: 参见“Json::StyledStreamWriter::indentation_”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(54): warning C4996: 'Json::FastWriter': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): note: 参见“Json::FastWriter”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(55): warning C4996: 'Json::FastWriter::write': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(177): note: 参见“Json::FastWriter::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(61): warning C4996: 'Json::Reader': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(35): note: 参见“Json::Reader”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(63): warning C4996: 'Json::Reader::parse': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(77): note: 参见“Json::Reader::parse”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(386): warning C4996: 'Json::FastWriter': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(159): note: 参见“Json::FastWriter”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(387): warning C4996: 'Json::FastWriter::write': Use StreamWriterBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\writer.h(177): note: 参见“Json::FastWriter::write”的声明
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::nodes_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(237): note: 参见“Json::Reader::nodes_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::errors_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(238): note: 参见“Json::Reader::errors_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::document_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(239): note: 参见“Json::Reader::document_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): warning C4996: 'Json::Reader::commentsBefore_': Use CharReader and CharReaderBuilder instead
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\include\json\reader.h(245): note: 参见“Json::Reader::commentsBefore_”的声明
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\jsonobjectbase.h(456): note: 此诊断出现在编译器生成的函数“Json::Reader::~Reader(void)”中
+  FeedBackCustomer.cpp
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\feedbackcustomer.h(44): warning C4018: “<”: 有符号/无符号不匹配
+  DataBaseManager.cpp
+  CThread.cpp
+  ConfigManager.cpp
+  CacheManager.cpp
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\cachemanager.cpp(75): warning C4267: “初始化”: 从“size_t”转换到“char”，可能丢失数据
+e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\cachemanager.cpp(76): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
   正在生成代码...
-FeedBackManager.obj : error LNK2019: 无法解析的外部符号 "public: float __thiscall hebi::Feedback::FloatField::get(void)const " (?get@FloatField@Feedback@hebi@@QBEMXZ)，该符号在函数 "public: class FeedbackCustomStruct __thiscall FeedBackManager::toFeedBackCustomStruct(class hebi::Feedback const &)" (?toFeedBackCustomStruct@FeedBackManager@@QAE?AVFeedbackCustomStruct@@ABVFeedback@hebi@@@Z) 中被引用
-FeedBackManager.obj : error LNK2019: 无法解析的外部符号 "public: double __thiscall hebi::Feedback::HighResAngleField::get(void)const " (?get@HighResAngleField@Feedback@hebi@@QBENXZ)，该符号在函数 "public: class FeedbackCustomStruct __thiscall FeedBackManager::toFeedBackCustomStruct(class hebi::Feedback const &)" (?toFeedBackCustomStruct@FeedBackManager@@QAE?AVFeedbackCustomStruct@@ABVFeedback@hebi@@@Z) 中被引用
-FeedBackManager.obj : error LNK2019: 无法解析的外部符号 "public: struct hebi::Color __thiscall hebi::Feedback::LedField::getColor(void)const " (?getColor@LedField@Feedback@hebi@@QBE?AUColor@3@XZ)，该符号在函数 "public: class FeedbackCustomStruct __thiscall FeedBackManager::toFeedBackCustomStruct(class hebi::Feedback const &)" (?toFeedBackCustomStruct@FeedBackManager@@QAE?AVFeedbackCustomStruct@@ABVFeedback@hebi@@@Z) 中被引用
-FeedBackManager.obj : error LNK2019: 无法解析的外部符号 "public: class hebi::Feedback::FloatField const & __thiscall hebi::Feedback::voltage(void)const " (?voltage@Feedback@hebi@@QBEABVFloatField@12@XZ)，该符号在函数 "public: class FeedbackCustomStruct __thiscall FeedBackManager::toFeedBackCustomStruct(class hebi::Feedback const &)" (?toFeedBackCustomStruct@FeedBackManager@@QAE?AVFeedbackCustomStruct@@ABVFeedback@hebi@@@Z) 中被引用
-FeedBackManager.obj : error LNK2019: 无法解析的外部符号 "public: class hebi::Feedback::LedField const & __thiscall hebi::Feedback::led(void)const " (?led@Feedback@hebi@@QBEABVLedField@12@XZ)，该符号在函数 "public: class FeedbackCustomStruct __thiscall FeedBackManager::toFeedBackCustomStruct(class hebi::Feedback const &)" (?toFeedBackCustomStruct@FeedBackManager@@QAE?AVFeedbackCustomStruct@@ABVFeedback@hebi@@@Z) 中被引用
-FeedBackManager.obj : error LNK2019: 无法解析的外部符号 "public: int __thiscall hebi::GroupFeedback::size(void)const " (?size@GroupFeedback@hebi@@QBEHXZ)，该符号在函数 "public: class GroupfeedbackCustomStruct __thiscall FeedBackManager::toGroupFbCustomStruct(class hebi::GroupFeedback const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?toGroupFbCustomStruct@FeedBackManager@@QAE?AVGroupfeedbackCustomStruct@@PBVGroupFeedback@hebi@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
-FeedBackManager.obj : error LNK2019: 无法解析的外部符号 "public: class hebi::Feedback const & __thiscall hebi::GroupFeedback::operator[](int)const " (??AGroupFeedback@hebi@@QBEABVFeedback@1@H@Z)，该符号在函数 "public: class GroupfeedbackCustomStruct __thiscall FeedBackManager::toGroupFbCustomStruct(class hebi::GroupFeedback const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?toGroupFbCustomStruct@FeedBackManager@@QAE?AVGroupfeedbackCustomStruct@@PBVGroupFeedback@hebi@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
-FeedBackManager.obj : error LNK2019: 无法解析的外部符号 "public: class Eigen::Matrix<double,-1,1,0,-1,1> __thiscall hebi::GroupFeedback::getPosition(void)const " (?getPosition@GroupFeedback@hebi@@QBE?AV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@XZ)，该符号在函数 "public: class GroupfeedbackCustomStruct __thiscall FeedBackManager::toGroupFbCustomStruct(class hebi::GroupFeedback const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?toGroupFbCustomStruct@FeedBackManager@@QAE?AVGroupfeedbackCustomStruct@@PBVGroupFeedback@hebi@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
-FeedBackManager.obj : error LNK2019: 无法解析的外部符号 "public: class Eigen::Matrix<double,-1,1,0,-1,1> __thiscall hebi::GroupFeedback::getVelocity(void)const " (?getVelocity@GroupFeedback@hebi@@QBE?AV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@XZ)，该符号在函数 "public: class GroupfeedbackCustomStruct __thiscall FeedBackManager::toGroupFbCustomStruct(class hebi::GroupFeedback const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?toGroupFbCustomStruct@FeedBackManager@@QAE?AVGroupfeedbackCustomStruct@@PBVGroupFeedback@hebi@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
-FeedBackManager.obj : error LNK2019: 无法解析的外部符号 "public: class Eigen::Matrix<double,-1,1,0,-1,1> __thiscall hebi::GroupFeedback::getTorque(void)const " (?getTorque@GroupFeedback@hebi@@QBE?AV?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@XZ)，该符号在函数 "public: class GroupfeedbackCustomStruct __thiscall FeedBackManager::toGroupFbCustomStruct(class hebi::GroupFeedback const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?toGroupFbCustomStruct@FeedBackManager@@QAE?AVGroupfeedbackCustomStruct@@PBVGroupFeedback@hebi@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
-InitManager.obj : error LNK2019: 无法解析的外部符号 "public: void __thiscall hebi::Command::LedField::setOverrideColor(struct hebi::Color const &)" (?setOverrideColor@LedField@Command@hebi@@QAEXABUColor@3@@Z)，该符号在函数 "public: bool __thiscall CommandCustomer::customCommand(void)" (?customCommand@CommandCustomer@@QAE_NXZ) 中被引用
-InitManager.obj : error LNK2019: 无法解析的外部符号 "public: class hebi::Command::LedField & __thiscall hebi::Command::led(void)" (?led@Command@hebi@@QAEAAVLedField@12@XZ)，该符号在函数 "public: bool __thiscall CommandCustomer::customCommand(void)" (?customCommand@CommandCustomer@@QAE_NXZ) 中被引用
-InitManager.obj : error LNK2019: 无法解析的外部符号 "public: __thiscall hebi::GroupCommand::GroupCommand(int)" (??0GroupCommand@hebi@@QAE@H@Z)，该符号在函数 "public: bool __thiscall CommandCustomer::customCommand(void)" (?customCommand@CommandCustomer@@QAE_NXZ) 中被引用
-InitManager.obj : error LNK2019: 无法解析的外部符号 "public: virtual __thiscall hebi::GroupCommand::~GroupCommand(void)" (??1GroupCommand@hebi@@UAE@XZ)，该符号在函数 "public: bool __thiscall CommandCustomer::customCommand(void)" (?customCommand@CommandCustomer@@QAE_NXZ) 中被引用
-InitManager.obj : error LNK2019: 无法解析的外部符号 "public: class hebi::Command & __thiscall hebi::GroupCommand::operator[](int)" (??AGroupCommand@hebi@@QAEAAVCommand@1@H@Z)，该符号在函数 "public: bool __thiscall CommandCustomer::customCommand(void)" (?customCommand@CommandCustomer@@QAE_NXZ) 中被引用
-InitManager.obj : error LNK2019: 无法解析的外部符号 "public: virtual __thiscall hebi::Group::~Group(void)" (??1Group@hebi@@UAE@XZ)，该符号在函数 "public: virtual void * __thiscall hebi::Group::`scalar deleting destructor'(unsigned int)" (??_GGroup@hebi@@UAEPAXI@Z) 中被引用
-LookUpManager.obj : error LNK2001: 无法解析的外部符号 "public: virtual __thiscall hebi::Group::~Group(void)" (??1Group@hebi@@UAE@XZ)
-InitManager.obj : error LNK2019: 无法解析的外部符号 "public: int __thiscall hebi::Group::size(void)" (?size@Group@hebi@@QAEHXZ)，该符号在函数 "public: bool __thiscall CommandCustomer::customCommand(void)" (?customCommand@CommandCustomer@@QAE_NXZ) 中被引用
-InitManager.obj : error LNK2019: 无法解析的外部符号 "public: bool __thiscall hebi::Group::sendCommandWithAcknowledgement(class hebi::GroupCommand const &,int)" (?sendCommandWithAcknowledgement@Group@hebi@@QAE_NABVGroupCommand@2@H@Z)，该符号在函数 "public: bool __thiscall CommandCustomer::customCommand(void)" (?customCommand@CommandCustomer@@QAE_NXZ) 中被引用
-InitManager.obj : error LNK2019: 无法解析的外部符号 "public: __thiscall hebi::Lookup::Lookup(void)" (??0Lookup@hebi@@QAE@XZ)，该符号在函数 "public: static int __cdecl InitManager::main(void)" (?main@InitManager@@SAHXZ) 中被引用
-InitManager.obj : error LNK2019: 无法解析的外部符号 "public: virtual __thiscall hebi::Lookup::~Lookup(void)" (??1Lookup@hebi@@UAE@XZ)，该符号在函数 "public: static int __cdecl InitManager::main(void)" (?main@InitManager@@SAHXZ) 中被引用
-InitManager.obj : error LNK2019: 无法解析的外部符号 "public: class std::unique_ptr<class hebi::Group,struct std::default_delete<class hebi::Group> > __thiscall hebi::Lookup::getGroupFromNames(class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > const &,class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > const &,long)" (?getGroupFromNames@Lookup@hebi@@QAE?AV?$unique_ptr@VGroup@hebi@@U?$default_delete@VGroup@hebi@@@std@@@std@@ABV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@4@0J@Z)，该符号在函数 "public: bool __thiscall CommandCustomer::customCommand(void)" (?customCommand@CommandCustomer@@QAE_NXZ) 中被引用
-LookUpManager.obj : error LNK2001: 无法解析的外部符号 "public: class std::unique_ptr<class hebi::Group,struct std::default_delete<class hebi::Group> > __thiscall hebi::Lookup::getGroupFromNames(class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > const &,class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > const &,long)" (?getGroupFromNames@Lookup@hebi@@QAE?AV?$unique_ptr@VGroup@hebi@@U?$default_delete@VGroup@hebi@@@std@@@std@@ABV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@4@0J@Z)
-LookUpManager.obj : error LNK2019: 无法解析的外部符号 "public: void __thiscall hebi::Group::addFeedbackHandler(class std::function<void __cdecl(class hebi::GroupFeedback const *)>)" (?addFeedbackHandler@Group@hebi@@QAEXV?$function@$$A6AXPBVGroupFeedback@hebi@@@Z@std@@@Z)，该符号在函数 "private: void __thiscall LookUpManager::addHandlerForOneGroup(class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > * &,class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > * &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?addHandlerForOneGroup@LookUpManager@@AAEXAAPAV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@0V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@@Z) 中被引用
-LookUpManager.obj : error LNK2019: 无法解析的外部符号 "public: class std::unique_ptr<class hebi::Group,struct std::default_delete<class hebi::Group> > __thiscall hebi::Lookup::getConnectedGroupFromName(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,long)" (?getConnectedGroupFromName@Lookup@hebi@@QAE?AV?$unique_ptr@VGroup@hebi@@U?$default_delete@VGroup@hebi@@@std@@@std@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@4@0J@Z)，该符号在函数 "private: class std::vector<class GroupStruct,class std::allocator<class GroupStruct> > __thiscall LookUpManager::getGroupsStateFromHeibi(class std::vector<class GroupStruct,class std::allocator<class GroupStruct> >,int)" (?getGroupsStateFromHeibi@LookUpManager@@AAE?AV?$vector@VGroupStruct@@V?$allocator@VGroupStruct@@@std@@@std@@V23@H@Z) 中被引用
-LookUpManager.obj : error LNK2019: 无法解析的外部符号 "public: virtual __thiscall hebi::Lookup::EntryList::~EntryList(void)" (??1EntryList@Lookup@hebi@@UAE@XZ)，该符号在函数 "public: virtual void * __thiscall hebi::Lookup::EntryList::`scalar deleting destructor'(unsigned int)" (??_GEntryList@Lookup@hebi@@UAEPAXI@Z) 中被引用
-LookUpManager.obj : error LNK2019: 无法解析的外部符号 "public: struct hebi::Lookup::EntryList::Entry __thiscall hebi::Lookup::EntryList::getEntry(int)" (?getEntry@EntryList@Lookup@hebi@@QAE?AUEntry@123@H@Z)，该符号在函数 "private: class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > > > > __thiscall LookUpManager::getNewestMapFromHibi(void)" (?getNewestMapFromHibi@LookUpManager@@AAE?AV?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@2@@std@@@2@@std@@XZ) 中被引用
-LookUpManager.obj : error LNK2019: 无法解析的外部符号 "public: int __thiscall hebi::Lookup::EntryList::size(void)" (?size@EntryList@Lookup@hebi@@QAEHXZ)，该符号在函数 "private: class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > > > > __thiscall LookUpManager::getNewestMapFromHibi(void)" (?getNewestMapFromHibi@LookUpManager@@AAE?AV?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@2@@std@@@2@@std@@XZ) 中被引用
-LookUpManager.obj : error LNK2019: 无法解析的外部符号 "public: class std::unique_ptr<class hebi::Lookup::EntryList,struct std::default_delete<class hebi::Lookup::EntryList> > __thiscall hebi::Lookup::getEntryList(void)" (?getEntryList@Lookup@hebi@@QAE?AV?$unique_ptr@VEntryList@Lookup@hebi@@U?$default_delete@VEntryList@Lookup@hebi@@@std@@@std@@XZ)，该符号在函数 "private: class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > > > > __thiscall LookUpManager::getNewestMapFromHibi(void)" (?getNewestMapFromHibi@LookUpManager@@AAE?AV?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@2@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@2@@std@@@2@@std@@XZ) 中被引用
-E:\tools\project\RMCS_PROXY_DEMO\Debug\RMCS_PROXY_DEMO.exe : fatal error LNK1120: 27 个无法解析的外部命令
+  RMCS_PROXY_DEMO.vcxproj -> E:\tools\project\RMCS_PROXY_DEMO\Debug\RMCS_PROXY_DEMO.exe
+  RMCS_PROXY_DEMO.vcxproj -> E:\tools\project\RMCS_PROXY_DEMO\Debug\RMCS_PROXY_DEMO.pdb (Full PDB)

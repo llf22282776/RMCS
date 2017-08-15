@@ -6,12 +6,17 @@
 #include <string>
 #include <iostream>
 #include <chrono>
-#include "src/lookup.hpp"
+#include <lookup.hpp>
+#include <group.hpp>
+#include <group_feedback.hpp>
+#include <group_command.hpp>
+#include <feedback.hpp>
+#include <command.hpp>
 #include "CacheManager.h"
 #include "queue_safe.h"
 #include "FeedBackManager.h"
 #include "ConfigManager.h"
-#include "JsonObjectBase.h"
+//#include "JsonObjectBase.h"
 #include "common.h"
 using namespace std;
 using namespace hebi;
@@ -30,7 +35,7 @@ class LookUpManager:public CThread{
 private:
 	//------------------------
 	hebi::Lookup& lookup; //hebi接口对象
-
+	int default_frequency ;
 	queue_safe<GroupfeedbackCustomStruct>& groupFeedbackQueue;//收到的异步groupfeedback都应该放到这里
 
 	//group会增加和减少,会不会影响什么？估计不会
@@ -70,8 +75,8 @@ public:
 		queue_safe<GroupfeedbackCustomStruct>& groupFeedbackQueue,
 		Lookup& lookup_,
 		ConfigManager& configManager_,
-		int sleep_time_=DEAULT_SLEEP_TIME
-
+		int sleep_time_=DEFAULT_SLEEP_TIME,
+		int default_frequency_ = DEFAULT_FD_FREQUENCY
 		);
 	//需要什么参数,缓存管理类，简单，不需要信息沟通,没必要生产者消费者模型,
 	//传进来缓存管理对象，队列对象，

@@ -19,6 +19,8 @@ private:
 	vector<GroupStruct> groupList;
 	vector<RedisCofig> redisList;
 	vector<DBconfig> dbList;
+	int sleep_time;
+	int feedBackFrequency;
 public:
 	ConfigManager();
 	ConfigManager(string filePath);
@@ -27,6 +29,8 @@ public:
 	vector<GroupStruct> getGroupList();
 	vector<RedisCofig> getRedisList();
 	vector<DBconfig> getDbConfig();
+	int getSleepTime();
+	int getFeedbackFrequency();
 };
 
 #endif // !ConfigManager_H

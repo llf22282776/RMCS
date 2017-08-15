@@ -1,6 +1,7 @@
 #ifndef DATABASEMANAGER_H
 #define DATABASEMANAGER_H
 #include "CThread.h"
+#include "common.h"
 class DataBaseManager:public CThread
 {
 	//这是个线程类
@@ -14,7 +15,7 @@ class DataBaseManager:public CThread
 	//一个连接本地的，一个连接远程的
 	//调取连接类的接口，进行数据库的实际写入
 public:
-	DataBaseManager(){}
+	DataBaseManager(int st=DEFAULT_SLEEP_TIME):sleep_time(st){}
 	~DataBaseManager(){
 
 	}
@@ -23,7 +24,7 @@ public:
 		this->start();
 	}
 private:
-
+	int sleep_time;
 
 
 };

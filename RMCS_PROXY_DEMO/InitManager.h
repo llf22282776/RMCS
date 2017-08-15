@@ -9,7 +9,7 @@
 #include "FeedBackCustomer.h"
 #include "FeedBackManager.h"
 
-#include "src/lookup.hpp"
+#include <src/lookup.hpp>
 #include <thread>
 #include "common.h"
 class InitManager
@@ -34,41 +34,70 @@ public:
 	
 	}
 	static int main(){
-		cout << "----init queue!----" << endl;
-	
+		//printf("----init queue!----\n");
+		printf("--------init queue!--------\n");
 		queue_safe<GroupfeedbackCustomStruct> gfd_queue;
 		queue_safe<GroupStruct> gs_queue;
 		queue_safe<CommandStruct> cmd_queue;
-		
+		printf("--------init hebi lookup--------\n");
 		hebi::Lookup lookup;
+		//hebi::Lookup lookup1;
 		//加载配置
-		cout << "----loader config!" << endl;
+		int sleepTime;
+		int fd_hz;
+		printf("--------init configManager--------\n");
 		ConfigManager cfgManager("resource/config.xml");
+		if (cfgManager.getSleepTime() <= DEFAULT_SLEEP_TIME) {
+			sleepTime = DEFAULT_SLEEP_TIME;
+
+		}else {
+			sleepTime = cfgManager.getSleepTime();
+		
+		}
+		if (cfgManager.getFeedbackFrequency() <= DEFAULT_FD_FREQUENCY) {
+			fd_hz = DEFAULT_FD_FREQUENCY;
+
+		}
+		else {
+			fd_hz = cfgManager.getFeedbackFrequency();
+
+		}
 		//运行缓存管理
-		cout << " config loaded ! init cacheManager" << endl;
-		CacheManager cacheManger(cfgManager.getRedisList().at(0).ip,cfgManager.getRedisList().at(0).port);
+		printf("---------init cacheManager--------\n");
+		CacheManager cacheManger(cfgManager.getRedisList().at(0).ip,cfgManager.getRedisList().at(0).port, sleepTime);
 		//加载数据库管理
-		cout << " ----cacheManager inited ! init databaseManager" << endl;
+		printf("---------init databaseManager ---------\n");
 		DataBaseManager db;
-		cout << " ----databaseManager inited ! init lookupManager" << endl;
+		printf("---------init lookupManager ---------\n");
 		//运行lookup线程
-		LookUpManager lkManager(cacheManger,gfd_queue,lookup,cfgManager);
-		cout << " ----lookupManager inited ! init CommandCustomer" << endl;
+		LookUpManager lkManager(cacheManger,gfd_queue,lookup,cfgManager,sleepTime,fd_hz);
+		printf("---------init CommandCustomer ---------\n");
 		//运行命令消费者
-		CommandCustomer cmdCusrom(cmd_queue,cfgManager,lkManager);
-		cout << " ----CommandCustomer inited ! init FeedBackCustomer" << endl;
+		CommandCustomer cmdCusrom(cmd_queue,cfgManager, lookup, sleepTime);
+		printf("---------init FeedBackCustomer ---------\n");
 		//运行回馈消费者
-		FeedBackCustomer fdCustomer(gfd_queue,cacheManger,db);
+		FeedBackCustomer fdCustomer(gfd_queue,cacheManger,db, sleepTime);
 		//``````````````````````````````````
+		printf("---------run cache thread ---------\n");
+
 		cacheManger.initCacheManager();
+		printf("---------run lookupManager thread ---------\n");
 		lkManager.init();
+		printf("---------run commandCustomer thread ---------\n");
 		cmdCusrom.init();
+		printf("---------run feedbackCustomer thread ---------\n");
 		fdCustomer.init();
-		cout<<"all run !!!"<<endl;
+		printf("---------all working!---------\n");
 		cacheManger.join();
+		printf("---------cacheManger join!---------\n");
 		lkManager.join();
+		printf("---------lkManager join!---------\n");
 		cmdCusrom.join();
+		printf("---------cmdCusrom join!---------\n");
 		fdCustomer.join();
+		printf("---------fdCustomer join!---------\n");
+		int i;
+		cin >> i;
 		return 0;
 		
 	}

@@ -29,7 +29,7 @@ private:
 
 	std::condition_variable data_cond;  
 public:
-	CacheManager(string ip_,int port_,int sleep_time=50);
+	CacheManager(string ip_,int port_,int sleep_time=DEFAULT_SLEEP_TIME);
 	~CacheManager();
 	void initCacheManager();//链接，跑线程等等操作
 	CacheConnection cacheConnect;
@@ -50,7 +50,7 @@ public:
 	void run() override;//重置运行函数
 	bool reconnect();//重新连接
 
-	bool pushNewFamily_list_ToCache_mtx(const string& key ,vector<string>& list);//把东西放进缓存里面
+	bool flushCacheAndItNameList(const string& key ,vector<string>& list);//把东西放进缓存里面
 	bool updateGroupFeedBack(GroupfeedbackCustomStruct gfd);//更新缓存feedbacklist,只增不减
 	 
 	int sleep_time;
