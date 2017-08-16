@@ -1,17 +1,1 @@
-﻿  LookUpManager.cpp
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\lookupmanager.cpp(216): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\lookupmanager.cpp(236): warning C4474: printf: 格式字符串中传递的参数太多
-  e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\lookupmanager.cpp(236): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
-  正在生成代码...
-cl : 命令行 warning D9028: 最小重新生成失败，正在转换为标准生成
-  正在编译...
-  FeedBackCustomer.cpp
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  InitManager.cpp
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\src\eigen\src\core\arch\cuda\half.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\commandcustomer.h(91): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-e:\tools\project\rmcs_proxy_demo\rmcs_proxy_demo\commandcustomer.h(100): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-  正在生成代码...
-  RMCS_PROXY_DEMO.vcxproj -> E:\tools\project\RMCS_PROXY_DEMO\x64\Debug\RMCS_PROXY_DEMO.exe
-  RMCS_PROXY_DEMO.vcxproj -> E:\tools\project\RMCS_PROXY_DEMO\x64\Debug\RMCS_PROXY_DEMO.pdb (Full PDB)
+﻿

@@ -218,6 +218,7 @@ public:
 	vector<string> names;
 	vector<CommandStruct> fd;
 	int cmd;
+	CommandGroupStruct() {};
 	CommandGroupStruct(vector<CommandStruct> fd_,vector<string> fs_,vector<string> names_) :fd(fd_),familys(fs_),names(names_) {
 
 	}

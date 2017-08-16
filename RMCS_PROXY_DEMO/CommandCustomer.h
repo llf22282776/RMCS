@@ -54,7 +54,9 @@ public:
 		
 		printf("COMMAND_CUSTOMER : send led command\n");
 		//shared_ptr<CommandGroupStruct> mapPtr  = this->command_struct_queue.wait_and_pop();
-		CommandGroupStruct* mapPtr = &(getFakeLedCommand({"f1"}, {"leg","arm"},"testGroup",2));
+		CommandGroupStruct* mapPtr = new CommandGroupStruct();
+	    *mapPtr = getFakeLedCommand({"SEA-Snake","Spare"}, {"SA011","SA035"},"testGroup",2);
+		
 		if(!mapPtr)return false;//没有取到需要消耗的gfd
 		unique_ptr<hebi::Group> g= this->lookup.getGroupFromNames(mapPtr->names,mapPtr->familys);
 		printf("COMMAND_CUSTOMER : g is not null:%d\n",g!=NULL);
@@ -141,18 +143,18 @@ void CommandCustomer::run(){
 
 }
 CommandGroupStruct CommandCustomer::getFakeLedCommand(vector<string> fs_,vector<string> ns_,string groupName,int size) {
-	Led_field l(254, 0, 0);
+	Led_field l(181, 181, 181);
 	Actuator_field a(0,0,0,0);
 	vector<CommandStruct> v;
 	for (int i = 0; i < size;i++) {
 		CommandStruct c(a, l);
 		v.push_back(c);
 	}
-	CommandGroupStruct cg(v,fs_,ns_);
-	cg.groupName = groupName;
-	cg.cmd = LED_CMD;
-	return cg;
-	
+
+	CommandGroupStruct* cg = new CommandGroupStruct(v,fs_,ns_);
+	cg->groupName.assign(groupName);
+	cg->cmd = LED_CMD;
+	return *cg;
 
 }
 
