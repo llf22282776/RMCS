@@ -93,6 +93,9 @@
     <ClInclude Include="src\vector_3_f.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="JsonObjectBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CThread.cpp">

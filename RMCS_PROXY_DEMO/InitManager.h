@@ -41,7 +41,7 @@ public:
 		queue_safe<CommandGroupStruct> cmd_queue;
 		printf("--------init hebi lookup--------\n");
 		hebi::Lookup lookup;
-		hebi::Lookup lookup1;
+		//hebi::Lookup lookup1;
 		//加载配置
 		int sleepTime;
 		int fd_hz;
@@ -73,7 +73,7 @@ public:
 		LookUpManager lkManager(cacheManger,gfd_queue,lookup,cfgManager,sleepTime,fd_hz);
 		printf("---------init CommandCustomer ---------\n");
 		//运行命令消费者
-		CommandCustomer cmdCusrom(cmd_queue,cfgManager, lookup1, sleepTime);
+		CommandCustomer cmdCusrom(cmd_queue,cfgManager, lookup, sleepTime);
 		printf("---------init FeedBackCustomer ---------\n");
 		//运行回馈消费者
 		FeedBackCustomer fdCustomer(gfd_queue,cacheManger,db, sleepTime);

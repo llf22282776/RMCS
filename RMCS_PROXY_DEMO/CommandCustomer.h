@@ -52,18 +52,19 @@ public:
 	}
 	bool customCommand(){
 		
-		printf("COMMAND_CUSTOMER : send led command\n");
+		
 		//shared_ptr<CommandGroupStruct> mapPtr  = this->command_struct_queue.wait_and_pop();
 		CommandGroupStruct* mapPtr = new CommandGroupStruct();
 	    *mapPtr = getFakeLedCommand({"SEA-Snake","Spare"}, {"SA011","SA035"},"testGroup",2);
 		
 		if(!mapPtr)return false;//没有取到需要消耗的gfd
 		unique_ptr<hebi::Group> g= this->lookup.getGroupFromNames(mapPtr->names,mapPtr->familys);
-		printf("COMMAND_CUSTOMER : g is not null:%d\n",g!=NULL);
+		//printf("COMMAND_CUSTOMER : g is not null:%d\n",g!=NULL);
 		if (!g){
-			printf("COMMAND_CUSTOMER : g is  null\n");
+			printf("COMMAND_CUSTOMER : group is  null\n");
 			return false;
 		}
+		printf("COMMAND_CUSTOMER : send led command\n");
 		//创建这个group的command
 		hebi::GroupCommand command(g->size());
 		switch (mapPtr->cmd)
@@ -121,6 +122,7 @@ public:
 		
 			printf("COMMAND_CUSTOMER : send time out\n");
 		}
+		delete mapPtr;
 		return true;
 	}
 private:

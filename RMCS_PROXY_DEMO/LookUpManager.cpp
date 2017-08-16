@@ -49,9 +49,10 @@ void LookUpManager::run() {
 		//2.刷新f and n
 		this->updateFamilyAndNamesMap(this->getNewestMapFromHibi());
 
-		//3.刷新group里面的name的连接状态
 
+		//3.刷新group里面的name的连接状态
 		this->updateGroupConncetState(this->cacheManager.getGroupInCache());
+
 		//4。线程暂停
 		if(this->sleep_time>0){
 			this_thread::sleep_for(std::chrono::milliseconds(this->sleep_time));
@@ -64,8 +65,10 @@ void LookUpManager::run() {
 void LookUpManager::init() {
 	//获取
 	vector<GroupStruct> grpList=this->getGroupListFromConfig();
-	this->fixedGroup.assign(grpList.begin(),grpList.end()); 
 
+
+	this->fixedGroup.assign(grpList.begin(),grpList.end()); 
+	
 	this->start();//启动线程,还有其他的操作？
 
 }//init the lookupManager,比如跑起来
@@ -168,7 +171,9 @@ vector<GroupStruct> LookUpManager::getGroupListFromConfig(){
 void LookUpManager::addHandlerFromGroups(){
 	//给fixedgroup添加
 	if(fixedGroup.size()>0 && this->fixedAdded == false){
+		printf("LOOKUPMANAGER_THREAD:add FeedBack Handle to Group\n");
 		for(int i=0;i<fixedGroup.size();i++){
+
 			vector<string>* familyVec=new vector<string>(),*nameVec = new vector<string>();
 			//获取names和familys
 			string gname=fixedGroup.at(i).getName();
@@ -180,6 +185,7 @@ void LookUpManager::addHandlerFromGroups(){
 	}
 	vector<GroupStruct> gstVec= this->cacheManager.getGroupInCache();//没有的话会返回个空的
 	for(int i=0;i<gstVec.size();i++){
+		printf("LOOKUPMANAGER_THREAD:add FeedBack Handle to Group\n");
 		if(this->cacheGroupMap.count(gstVec.at(i).getName())){
 			//有，就不加了
 		}else {
@@ -188,7 +194,7 @@ void LookUpManager::addHandlerFromGroups(){
 			//获取names和familys
 			this->getFamilyAndNamesFromGroupStruct(gstVec.at(i),familyVec,nameVec);
 			//添加feedbackManager
-			string gname=fixedGroup.at(i).getName();
+			string gname= gstVec.at(i).getName();
 			this->addHandlerForOneGroup(familyVec,nameVec,gname);
 			//释放指针
 			delete familyVec,nameVec;
@@ -201,7 +207,7 @@ void LookUpManager::addHandlerFromGroups(){
 
 void LookUpManager::addHandlerForOneGroup(vector<string>* &familyVec,vector<string>* &nameVec,string groupName){
 	FeedBackManager* fdbManager=new FeedBackManager(this->groupFeedbackQueue); 
-	unique_ptr<Group> grp= this->lookup.getGroupFromNames(*familyVec,*nameVec,DEAULT_SLEEP_TIME);
+	unique_ptr<Group> grp= this->lookup.getGroupFromNames(*nameVec,*familyVec,DEAULT_SLEEP_TIME);
 	if (!grp){
 		printf("LOOKUPMANAGER_THREAD: group from hebi is null!s\n");
 		return;//null不用加

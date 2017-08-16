@@ -28,6 +28,7 @@
     <ClInclude Include="FeedBackCustomer.h" />
     <ClInclude Include="FeedBackManager.h" />
     <ClInclude Include="InitManager.h" />
+    <ClInclude Include="JsonObjectBase.h" />
     <ClInclude Include="LookUpManager.h" />
     <ClInclude Include="queue_safe.h" />
     <ClInclude Include="ServerApiManager.h" />
@@ -70,7 +71,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A406C413-D7CC-4251-A1D9-40B6FF857EA4}</ProjectGuid>
     <RootNamespace>RMCS_PROXY_DEMO</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -82,8 +83,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -116,16 +117,17 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir);$(ProjectDir)include\json;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)lib\win_x86;$(LibraryPath)</LibraryPath>
     <SourcePath>$(ProjectDir)src;$(ProjectDir);$(ProjectDir)include\src;$(SourcePath)</SourcePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir);$(ProjectDir)include\json;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)lib\win_x64;$(LibraryPath)</LibraryPath>
     <SourcePath>$(ProjectDir)src;$(ProjectDir);$(SourcePath)</SourcePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -137,7 +139,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>hebi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>hebi.lib;lib_json.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>E:\tools\boost_1_61_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
     </Link>
@@ -146,12 +148,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_64_0</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\tools\boost_1_61_0</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>hebi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>hebi.lib;lib_json.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>E:\tools\boost_1_61_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
