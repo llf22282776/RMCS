@@ -207,18 +207,33 @@ void LookUpManager::addHandlerFromGroups(){
 
 void LookUpManager::addHandlerForOneGroup(vector<string>* &familyVec,vector<string>* &nameVec,string groupName){
 	FeedBackManager* fdbManager=new FeedBackManager(this->groupFeedbackQueue); 
-	unique_ptr<Group> grp= this->lookup.getGroupFromNames(*nameVec,*familyVec,DEAULT_SLEEP_TIME);
+	unique_ptr<Group> grp;
+	grp = this->lookup.getGroupFromNames(*nameVec, *familyVec, DEAULT_SLEEP_TIME);
 	if (!grp){
 		printf("LOOKUPMANAGER_THREAD: group from hebi is null!s\n");
 		return;//null不用加
 	}
 	LookUpManager* this_ = this;
-	grp->addFeedbackHandler([&fdbManager,&groupName,&this_](const GroupFeedback* group_fbk){
+
+	/*8/16/2017 Pittsburgh Luyao Li Debug： 用同步方式获取feedback*/
+
+	GroupFeedback group_fbk(grp->size());
+	if (grp->requestFeedback(&group_fbk)){
+		this_->showGroupFeedBackInfo(&group_fbk);
+		GroupfeedbackCustomStruct gfb_custom = fdbManager->toGroupFbCustomStruct(&group_fbk, groupName);
+		fdbManager->putToQueue(gfb_custom);
+	}
+
+	/*
+	grp->addFeedbackHandler([&fdbManager, &groupName, &this_](const GroupFeedback* const group_fbk)->void
+	{
 		//用fdbManager里面的函数
 		this_->showGroupFeedBackInfo(group_fbk);
-		GroupfeedbackCustomStruct gfb_custom= fdbManager->toGroupFbCustomStruct(group_fbk,groupName);
+		GroupfeedbackCustomStruct gfb_custom = fdbManager->toGroupFbCustomStruct(group_fbk, groupName);
 		fdbManager->putToQueue(gfb_custom);
 	});
+	*/
+
 	grp->setFeedbackFrequencyHz(this->default_frequency);
 	this->feedbackManagerVec.push_back(*fdbManager); //放进vec里面管理
 }
@@ -234,10 +249,14 @@ void LookUpManager::getFamilyAndNamesFromGroupStruct(GroupStruct& thisGroup,vect
 
 }
 void LookUpManager::showGroupFeedBackInfo(const GroupFeedback* group_fbk) {
-	printf("LOOKUPMANAGER_THREAD:[-------GropFeedBack------]\n[------size:%d]\n",group_fbk->size());
+	printf("LOOKUPMANAGER_THREAD:[-------GroupFeedBack------]\n[size:%d]\n",group_fbk->size());
 	for (int i = 0; i < group_fbk->size();i++) {
-		printf("LOOKUPMANAGER_THREAD:moudule[%d][motorCurrent:%f,motorWindingCurrent:%f,voltage:%f,motorSensorTemperature:%f]\n",i,(*group_fbk)[i].actuator().motorCurrent().get(), (*group_fbk)[i].actuator().motorWindingCurrent().get(), (*group_fbk)[i].voltage().get(), (*group_fbk)[i].actuator().motorSensorTemperature().get());
-	
+		printf("LOOKUPMANAGER_THREAD: module[%d] feedback info:",i);
+		printf("voltage %f", (*group_fbk)[i].voltage().get());
+		printf("Motor current %f",(*group_fbk)[i].actuator().motorWindingCurrent().get());
+		printf("position %f", (*group_fbk)[i].actuator().position().get());
+		printf("velocity %f", (*group_fbk)[i].actuator().velocity().get());
+		printf("torque %f\n", (*group_fbk)[i].actuator().torque().get());
 	}
 	printf("LOOKUPMANAGER_THREAD:[-------END------]\n", group_fbk->size());
 
